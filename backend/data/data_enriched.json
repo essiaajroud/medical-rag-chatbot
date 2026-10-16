@@ -1,0 +1,133 @@
+[
+  {
+    "id": 0,
+    "question": "What is fever?",
+    "answer": "Fever is a temporary increase in body temperature, often due to an infection.",
+    "keywords": [
+      "temporary increase",
+      "body temperature",
+      "infection"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "What causes fever?",
+      "How is fever diagnosed?",
+      "What is the normal body temperature?"
+    ]
+  },
+  {
+    "id": 1,
+    "question": "What are the symptoms of flu?",
+    "answer": "Common symptoms include fever, cough, sore throat, muscle aches, and fatigue.",
+    "keywords": [
+      "flu",
+      "fever",
+      "cough",
+      "sore throat",
+      "muscle aches",
+      "fatigue"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "What are the common symptoms of a cold?",
+      "How is flu diagnosed?",
+      "How long does flu last?",
+      "Can flu be prevented?"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What should I do in case of chest pain?",
+    "answer": "Chest pain may indicate a serious condition such as a heart attack. Seek emergency medical help immediately.",
+    "keywords": [
+      "chest pain",
+      "heart attack"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "What are the symptoms of a heart attack?",
+      "When should I call an ambulance for chest pain?"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What are the common symptoms of a cold?",
+    "answer": "Common cold symptoms usually include sneezing, a stuffy or runny nose, a sore throat, coughing, and sometimes a headache. Symptoms often begin a few days after infection, and some may last 10 to 14 days.",
+    "keywords": [
+      "common cold",
+      "cold symptoms",
+      "sneezing",
+      "stuffy nose",
+      "runny nose",
+      "sore throat",
+      "cough",
+      "headache"
+    ],
+    "category": "disease",
+    "severity": "low",
+    "related_questions": [
+      "How is a cold different from the flu?",
+      "How long can cold symptoms last?",
+      "When should I contact a healthcare professional about a cold?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/commoncold.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 4,
+    "question": "What are the symptoms of dehydration?",
+    "answer": "Signs of dehydration can include thirst, a dry mouth or lips, dark yellow urine, urinating less often, tiredness, dizziness, and light-headedness. Severe symptoms such as confusion, unusual drowsiness, cold skin, or difficulty breathing can indicate a medical emergency.",
+    "keywords": [
+      "dehydration",
+      "thirst",
+      "dry mouth",
+      "dark urine",
+      "urinating less",
+      "dizziness",
+      "confusion",
+      "emergency"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "What can cause dehydration?",
+      "Who is at higher risk of dehydration?",
+      "What are warning signs of severe dehydration?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/dehydration/",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 5,
+    "question": "How is the flu different from a common cold?",
+    "answer": "Flu symptoms usually begin suddenly and often include fever, muscle aches, and fatigue. Cold symptoms tend to develop more gradually and mainly affect the nose and throat. Symptoms can overlap, so this comparison cannot confirm a diagnosis.",
+    "keywords": [
+      "flu",
+      "influenza",
+      "common cold",
+      "difference",
+      "sudden symptoms",
+      "muscle aches",
+      "fatigue",
+      "diagnosis"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "What are the symptoms of flu?",
+      "What are the common symptoms of a cold?",
+      "Can flu and a cold have similar symptoms?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/flu.html",
+    "reviewed_at": null,
+    "language": "en"
+  }
+]

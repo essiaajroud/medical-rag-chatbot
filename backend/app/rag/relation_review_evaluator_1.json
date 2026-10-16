@@ -1,0 +1,934 @@
+{
+  "packet_type": "blinded_independent_annotation",
+  "evaluator_code": "reviewer_1",
+  "instructions": "Complete independently. Do not seek or view A/D/E outputs. Document IDs are leads only; inspect document content before assigning proof status.",
+  "forms": [
+    {
+      "case_id": "d02",
+      "split": "development",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "La soif peut-elle accompagner le diabÃ¨te ?",
+      "original_unicode_repr": "'La soif peut-elle accompagner le diab\\xc3\\xa8te ?'",
+      "proposed_restoration": "La soif peut-elle accompagner le diabète ?",
+      "language": "fr",
+      "expected_relation_type_from_candidate_design": "association",
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 32,
+          "corpus_question_title": "What are the common symptoms of diabetes?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "Déterminer si la soif peut être associée au diabète.",
+      "linguistic_review": {
+        "grammar": "Correcte.",
+        "meaning_and_naturalness": "Question compréhensible et naturelle.",
+        "equivalent_to_raw_intended_text": "À confirmer : le texte original intact n'est pas disponible dans ce dossier.",
+        "status": "needs_validation",
+        "notes": "La restauration proposée est linguistiquement plausible, mais l'intention originale ne peut pas être confirmée à partir des éléments fournis."
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "Relation recherchée entre la soif et le diabète.",
+        "evidence_level_required": "Source médicale fiable décrivant explicitement l'association recherchée.",
+        "status": "needs_validation",
+        "notes": "Inspecter le contenu complet du document candidat avant de conclure qu'il prouve la relation."
+      },
+      "intent": "Rechercher une association médicale.",
+      "relation_type_and_direction": "association: soif ↔ diabète",
+      "concepts_to_link": [
+        "soif",
+        "diabète"
+      ],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "La formulation est compréhensible. La preuve documentaire et la réponse de référence restent à établir.",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "d03",
+      "split": "development",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "ÙÙ ØªØªØºÙØ± Ø£Ø¹Ø±Ø§Ø¶ Ø§ÙØ¥ÙÙÙÙÙØ²Ø§ Ø¹Ù Ø§ÙØ²ÙØ§ÙØ",
+      "original_unicode_repr": "'\\xd9\\x87\\xd9\\x84 \\xd8\\xaa\\xd8\\xaa\\xd8\\xba\\xd9\\x8a\\xd8\\xb1 \\xd8\\xa3\\xd8\\xb9\\xd8\\xb1\\xd8\\xa7\\xd8\\xb6 \\xd8\\xa7\\xd9\\x84\\xd8\\xa5\\xd9\\x86\\xd9\\x81\\xd9\\x84\\xd9\\x88\\xd9\\x86\\xd8\\xb2\\xd8\\xa7 \\xd8\\xb9\\xd9\\x86 \\xd8\\xa7\\xd9\\x84\\xd8\\xb2\\xd9\\x83\\xd8\\xa7\\xd9\\x85\\xd8\\x9f'",
+      "proposed_restoration": "هل تتغير أعراض الإنفلونزا عن الزكام؟",
+      "language": "ar",
+      "expected_relation_type_from_candidate_design": "comparison",
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 5,
+          "corpus_question_title": "How is the flu different from a common cold?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "Comparer les symptômes de la grippe et ceux du rhume.",
+      "linguistic_review": {
+        "grammar": "Compréhensible, mais la formulation peut être rendue plus naturelle.",
+        "meaning_and_naturalness": "La question semble demander une comparaison entre les symptômes de la grippe et du rhume.",
+        "equivalent_to_raw_intended_text": "À confirmer : la restauration est techniquement réversible, mais l'intention originale n'est pas établie.",
+        "status": "needs_validation",
+        "notes": "Reformulation possible si l'intention comparative est confirmée : « ما الفرق بين أعراض الإنفلونزا وأعراض الزكام؟ »"
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "Comparaison des symptômes associés à la grippe et au rhume.",
+        "evidence_level_required": "Sources médicales fiables permettant de comparer les symptômes des deux affections.",
+        "status": "needs_validation",
+        "notes": "Lire le contenu du document candidat ; son titre seul ne constitue pas une preuve."
+      },
+      "intent": "Comparer les symptômes de deux affections.",
+      "relation_type_and_direction": "comparison: symptômes de la grippe ↔ symptômes du rhume",
+      "concepts_to_link": [
+        "grippe",
+        "rhume",
+        "symptômes"
+      ],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "La question semble comparative, mais la formulation voulue et les preuves documentaires doivent encore être confirmées.",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "d05",
+      "split": "development",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "Quels signes accompagnent la dÃ©shydratation ?",
+      "original_unicode_repr": "'Quels signes accompagnent la d\\xc3\\xa9shydratation ?'",
+      "proposed_restoration": "Quels signes accompagnent la déshydratation ?",
+      "language": "fr",
+      "expected_relation_type_from_candidate_design": null,
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 4,
+          "corpus_question_title": "What are the symptoms of dehydration?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "Identifier les signes ou symptômes pouvant accompagner une déshydratation.",
+      "linguistic_review": {
+        "grammar": "Correcte.",
+        "meaning_and_naturalness": "Formulation française naturelle et compréhensible.",
+        "equivalent_to_raw_intended_text": "À confirmer : le texte original intact n'est pas disponible dans ce dossier.",
+        "status": "needs_validation",
+        "notes": "La formulation restaurée paraît plausible ; l'intention originale n'est pas confirmée par le seul texte reconstruit."
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "Identifier les signes/symptômes associés à la déshydratation ; la question ne demande pas explicitement une causalité.",
+        "evidence_level_required": "Source médicale fiable décrivant les signes ou symptômes de déshydratation.",
+        "status": "needs_validation",
+        "notes": "Vérifier le contenu complet du document candidat avant d'enregistrer une réponse de référence."
+      },
+      "intent": "Identification de signes ou symptômes.",
+      "relation_type_and_direction": "association: déshydratation ↔ signes/symptômes",
+      "concepts_to_link": [
+        "déshydratation",
+        "signes/symptômes"
+      ],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "La formulation est claire. La réponse attendue et la pertinence des documents restent à vérifier dans le corpus.",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "d06",
+      "split": "development",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "ÙÙ ÙÙÙÙ Ø£Ù ÙØ±ÙØ¹ Ø§ÙÙØ±Ø¶ Ø§ÙØ³ÙØ± ÙØ¤ÙØªØ§Ø",
+      "original_unicode_repr": "'\\xd9\\x87\\xd9\\x84 \\xd9\\x8a\\xd9\\x85\\xd9\\x83\\xd9\\x86 \\xd8\\xa3\\xd9\\x86 \\xd9\\x8a\\xd8\\xb1\\xd9\\x81\\xd8\\xb9 \\xd8\\xa7\\xd9\\x84\\xd9\\x85\\xd8\\xb1\\xd8\\xb6 \\xd8\\xa7\\xd9\\x84\\xd8\\xb3\\xd9\\x83\\xd8\\xb1 \\xd9\\x85\\xd8\\xa4\\xd9\\x82\\xd8\\xaa\\xd8\\xa7\\xd8\\x9f'",
+      "proposed_restoration": "هل يمكن أن يرفع المرض السكر مؤقتا؟",
+      "language": "ar",
+      "expected_relation_type_from_candidate_design": "causal",
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 36,
+          "corpus_question_title": "Does high blood sugar always mean diabetes?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "i02",
+      "split": "final",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "Un mÃ©dicament prescrit peut-il faire augmenter temporairement la glycÃ©mie ?",
+      "original_unicode_repr": "'Un m\\xc3\\xa9dicament prescrit peut-il faire augmenter temporairement la glyc\\xc3\\xa9mie ?'",
+      "proposed_restoration": "Un médicament prescrit peut-il faire augmenter temporairement la glycémie ?",
+      "language": "fr",
+      "expected_relation_type_from_candidate_design": "causal_indirect",
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 36,
+          "corpus_question_title": "Does high blood sugar always mean diabetes?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "i03",
+      "split": "final",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "ÙÙ ÙÙÙÙ ÙØ¯ÙØ§Ø¡ ÙÙØµÙÙ Ø£Ù ÙØ±ÙØ¹ Ø³ÙØ± Ø§ÙØ¯Ù ÙØ¤ÙØªØ§Ø",
+      "original_unicode_repr": "'\\xd9\\x87\\xd9\\x84 \\xd9\\x8a\\xd9\\x85\\xd9\\x83\\xd9\\x86 \\xd9\\x84\\xd8\\xaf\\xd9\\x88\\xd8\\xa7\\xd8\\xa1 \\xd9\\x85\\xd9\\x88\\xd8\\xb5\\xd9\\x88\\xd9\\x81 \\xd8\\xa3\\xd9\\x86 \\xd9\\x8a\\xd8\\xb1\\xd9\\x81\\xd8\\xb9 \\xd8\\xb3\\xd9\\x83\\xd8\\xb1 \\xd8\\xa7\\xd9\\x84\\xd8\\xaf\\xd9\\x85 \\xd9\\x85\\xd8\\xa4\\xd9\\x82\\xd8\\xaa\\xd8\\xa7\\xd8\\x9f'",
+      "proposed_restoration": "هل يمكن لدواء موصوف أن يرفع سكر الدم مؤقتا؟",
+      "language": "ar",
+      "expected_relation_type_from_candidate_design": "causal_indirect",
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 36,
+          "corpus_question_title": "Does high blood sugar always mean diabetes?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "i05",
+      "split": "final",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "La dÃ©shydratation pourrait-elle contribuer Ã  une fatigue inhabituelle ?",
+      "original_unicode_repr": "'La d\\xc3\\xa9shydratation pourrait-elle contribuer \\xc3\\xa0 une fatigue inhabituelle ?'",
+      "proposed_restoration": "La déshydratation pourrait-elle contribuer à une fatigue inhabituelle ?",
+      "language": "fr",
+      "expected_relation_type_from_candidate_design": "causal_indirect",
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 4,
+          "corpus_question_title": "What are the symptoms of dehydration?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        },
+        {
+          "document_id": 10,
+          "corpus_question_title": "What is fatigue and what can cause it?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "i06",
+      "split": "final",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "ÙÙ ÙØ¯ ÙØ³Ø§ÙÙ Ø§ÙØ¬ÙØ§Ù ÙÙ Ø§ÙØ´Ø¹ÙØ± Ø¨Ø§ÙØªØ¹Ø¨Ø",
+      "original_unicode_repr": "'\\xd9\\x87\\xd9\\x84 \\xd9\\x82\\xd8\\xaf \\xd9\\x8a\\xd8\\xb3\\xd8\\xa7\\xd9\\x87\\xd9\\x85 \\xd8\\xa7\\xd9\\x84\\xd8\\xac\\xd9\\x81\\xd8\\xa7\\xd9\\x81 \\xd9\\x81\\xd9\\x8a \\xd8\\xa7\\xd9\\x84\\xd8\\xb4\\xd8\\xb9\\xd9\\x88\\xd8\\xb1 \\xd8\\xa8\\xd8\\xa7\\xd9\\x84\\xd8\\xaa\\xd8\\xb9\\xd8\\xa8\\xd8\\x9f'",
+      "proposed_restoration": "هل قد يساهم الجفاف في الشعور بالتعب؟",
+      "language": "ar",
+      "expected_relation_type_from_candidate_design": "causal_indirect",
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 4,
+          "corpus_question_title": "What are the symptoms of dehydration?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        },
+        {
+          "document_id": 10,
+          "corpus_question_title": "What is fatigue and what can cause it?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "i08",
+      "split": "final",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "La vision floue est-elle associÃ©e Ã  une glycÃ©mie Ã©levÃ©e ?",
+      "original_unicode_repr": "'La vision floue est-elle associ\\xc3\\xa9e \\xc3\\xa0 une glyc\\xc3\\xa9mie \\xc3\\xa9lev\\xc3\\xa9e ?'",
+      "proposed_restoration": "La vision floue est-elle associée à une glycémie élevée ?",
+      "language": "fr",
+      "expected_relation_type_from_candidate_design": "association",
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 35,
+          "corpus_question_title": "What are the signs of high blood sugar?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "i09",
+      "split": "final",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "ÙÙ ÙØ±ØªØ¨Ø· ØªØ´ÙØ´ Ø§ÙØ±Ø¤ÙØ© Ø¨Ø§Ø±ØªÙØ§Ø¹ Ø³ÙØ± Ø§ÙØ¯ÙØ",
+      "original_unicode_repr": "'\\xd9\\x87\\xd9\\x84 \\xd9\\x8a\\xd8\\xb1\\xd8\\xaa\\xd8\\xa8\\xd8\\xb7 \\xd8\\xaa\\xd8\\xb4\\xd9\\x88\\xd8\\xb4 \\xd8\\xa7\\xd9\\x84\\xd8\\xb1\\xd8\\xa4\\xd9\\x8a\\xd8\\xa9 \\xd8\\xa8\\xd8\\xa7\\xd8\\xb1\\xd8\\xaa\\xd9\\x81\\xd8\\xa7\\xd8\\xb9 \\xd8\\xb3\\xd9\\x83\\xd8\\xb1 \\xd8\\xa7\\xd9\\x84\\xd8\\xaf\\xd9\\x85\\xd8\\x9f'",
+      "proposed_restoration": "هل يرتبط تشوش الرؤية بارتفاع سكر الدم؟",
+      "language": "ar",
+      "expected_relation_type_from_candidate_design": "association",
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 35,
+          "corpus_question_title": "What are the signs of high blood sugar?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "i11",
+      "split": "final",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "Comment comparer les symptÃ´mes de la grippe et de la COVID ?",
+      "original_unicode_repr": "'Comment comparer les sympt\\xc3\\xb4mes de la grippe et de la COVID ?'",
+      "proposed_restoration": "Comment comparer les symptômes de la grippe et de la COVID ?",
+      "language": "fr",
+      "expected_relation_type_from_candidate_design": "comparison",
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 1,
+          "corpus_question_title": "What are the symptoms of flu?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        },
+        {
+          "document_id": 5,
+          "corpus_question_title": "How is the flu different from a common cold?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "i12",
+      "split": "final",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "ÙÙÙ ØªØ®ØªÙÙ Ø£Ø¹Ø±Ø§Ø¶ Ø§ÙØ¥ÙÙÙÙÙØ²Ø§ Ø¹Ù Ø£Ø¹Ø±Ø§Ø¶ ÙÙÙÙØ¯Ø",
+      "original_unicode_repr": "'\\xd9\\x83\\xd9\\x8a\\xd9\\x81 \\xd8\\xaa\\xd8\\xae\\xd8\\xaa\\xd9\\x84\\xd9\\x81 \\xd8\\xa3\\xd8\\xb9\\xd8\\xb1\\xd8\\xa7\\xd8\\xb6 \\xd8\\xa7\\xd9\\x84\\xd8\\xa5\\xd9\\x86\\xd9\\x81\\xd9\\x84\\xd9\\x88\\xd9\\x86\\xd8\\xb2\\xd8\\xa7 \\xd8\\xb9\\xd9\\x86 \\xd8\\xa3\\xd8\\xb9\\xd8\\xb1\\xd8\\xa7\\xd8\\xb6 \\xd9\\x83\\xd9\\x88\\xd9\\x81\\xd9\\x8a\\xd8\\xaf\\xd8\\x9f'",
+      "proposed_restoration": "كيف تختلف أعراض الإنفلونزا عن أعراض كوفيد؟",
+      "language": "ar",
+      "expected_relation_type_from_candidate_design": "comparison",
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [
+        {
+          "document_id": 1,
+          "corpus_question_title": "What are the symptoms of flu?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        },
+        {
+          "document_id": 5,
+          "corpus_question_title": "How is the flu different from a common cold?",
+          "status": "candidate_for_manual_content_check_not_evidence"
+        }
+      ],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "i14",
+      "split": "final",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "Quels symptÃ´mes peuvent accompagner une anÃ©mie ?",
+      "original_unicode_repr": "'Quels sympt\\xc3\\xb4mes peuvent accompagner une an\\xc3\\xa9mie ?'",
+      "proposed_restoration": "Quels symptômes peuvent accompagner une anémie ?",
+      "language": "fr",
+      "expected_relation_type_from_candidate_design": null,
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "i15",
+      "split": "final",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "ÙØ§ Ø§ÙØ£Ø¹Ø±Ø§Ø¶ Ø§ÙØªÙ ÙØ¯ ØªØ±Ø§ÙÙ ÙÙØ± Ø§ÙØ¯ÙØ",
+      "original_unicode_repr": "'\\xd9\\x85\\xd8\\xa7 \\xd8\\xa7\\xd9\\x84\\xd8\\xa3\\xd8\\xb9\\xd8\\xb1\\xd8\\xa7\\xd8\\xb6 \\xd8\\xa7\\xd9\\x84\\xd8\\xaa\\xd9\\x8a \\xd9\\x82\\xd8\\xaf \\xd8\\xaa\\xd8\\xb1\\xd8\\xa7\\xd9\\x81\\xd9\\x82 \\xd9\\x81\\xd9\\x82\\xd8\\xb1 \\xd8\\xa7\\xd9\\x84\\xd8\\xaf\\xd9\\x85\\xd8\\x9f'",
+      "proposed_restoration": "ما الأعراض التي قد ترافق فقر الدم؟",
+      "language": "ar",
+      "expected_relation_type_from_candidate_design": null,
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    },
+    {
+      "case_id": "i17",
+      "split": "final",
+      "evaluator_code": "reviewer_1",
+      "evaluator_id_if_process_allows": "",
+      "review_date": "",
+      "original_raw_corrupted": "ÙÙ ØªÙØ¬Ø¯ Ø¹ÙØ§ÙØ© Ø¨ÙÙÙÙØ§Ø",
+      "original_unicode_repr": "'\\xd9\\x87\\xd9\\x84 \\xd8\\xaa\\xd9\\x88\\xd8\\xac\\xd8\\xaf \\xd8\\xb9\\xd9\\x84\\xd8\\xa7\\xd9\\x82\\xd8\\xa9 \\xd8\\xa8\\xd9\\x8a\\xd9\\x86\\xd9\\x87\\xd9\\x85\\xd8\\xa7\\xd8\\x9f'",
+      "proposed_restoration": "هل توجد علاقة بينهما؟",
+      "language": "ar",
+      "expected_relation_type_from_candidate_design": null,
+      "provenance": {
+        "raw_source": "previous captured workspace inspection; exact original is not present in the current candidate module",
+        "proposal_source": "current relation_independent_protocol.py candidate value",
+        "local_exact_source_matches": [],
+        "git_history_available": false,
+        "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+        "limitations": "No complete Git history or separate immutable source copy was available. Treat this as a technically reversible reconstruction, not proof of author intent or linguistic correctness."
+      },
+      "restoration_method": "reversible inverse of UTF-8 bytes decoded as ISO-8859-1; round-trip verified per string",
+      "possible_corpus_documents_for_manual_inspection_only": [],
+      "question_understanding": "",
+      "linguistic_review": {
+        "grammar": "",
+        "meaning_and_naturalness": "",
+        "equivalent_to_raw_intended_text": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "medical_review": {
+        "clinical_meaning_and_relation_direction": "",
+        "evidence_level_required": "",
+        "status": "needs_validation",
+        "notes": ""
+      },
+      "intent": "",
+      "relation_type_and_direction": "",
+      "concepts_to_link": [],
+      "evidence_level_required": "",
+      "documents_relation_proving": [],
+      "documents_partial_context": [],
+      "documents_off_topic": [],
+      "expected_answer": "",
+      "justification": "",
+      "decision": "",
+      "decision_options": [
+        "accepted",
+        "to_correct",
+        "ambiguous",
+        "excluded"
+      ],
+      "validation_status": "not_validated",
+      "prediction_blinding_notice": "No A/D/E predictions or oracle profiles are included in this form.",
+      "form_owner": "reviewer_1"
+    }
+  ]
+}

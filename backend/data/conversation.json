@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "question": "What is fever?",
+    "answer": "Fever is a temporary increase in body temperature, often due to an infection.",
+    "keywords": ["fever", "temperature", "infection"],
+    "category": "symptom",
+    "severity": "low",
+    "source": "WHO",
+    "related_questions": [
+      "How to treat fever?",
+      "When should I worry about fever?"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What are the symptoms of flu?",
+    "answer": "Common symptoms include fever, cough, sore throat, muscle aches, and fatigue.",
+    "keywords": ["flu", "symptoms", "cough", "fatigue"],
+    "category": "disease",
+    "severity": "medium",
+    "source": "CDC",
+    "related_questions": [
+      "How long does flu last?",
+      "How to treat flu at home?"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What should I do in case of chest pain?",
+    "answer": "Chest pain may indicate a serious condition such as a heart attack. Seek emergency medical help immediately.",
+    "keywords": ["chest pain", "heart attack", "emergency"],
+    "category": "emergency",
+    "severity": "high",
+    "source": "NHS",
+    "related_questions": [
+      "When is chest pain dangerous?",
+      "What are heart attack symptoms?"
+    ]
+  }
+]

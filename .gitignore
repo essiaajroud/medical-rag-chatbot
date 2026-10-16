@@ -1,0 +1,35 @@
+# --- Environnement et Secrets (TRÈS IMPORTANT) ---
+.env
+.env.local
+.env.*.local
+*.env
+backend/.env
+
+# --- Python (Backend) ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+ENV/
+env/
+
+# --- Base de données FAISS (Locales) ---
+backend/data/faiss_index/
+*.index
+
+# --- Node / React (Frontend) ---
+frontend/node_modules/
+frontend/build/
+dist/
+.next/
+.nuxt/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- Systèmes d'exploitation ---
+.DS_Store
+Thumbs.db

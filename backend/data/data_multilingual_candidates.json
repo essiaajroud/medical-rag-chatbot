@@ -1,0 +1,2610 @@
+[
+  {
+    "id": 0,
+    "question": "What is fever?",
+    "answer": "Fever is a temporary increase in body temperature, often due to an infection.",
+    "keywords": [
+      "temporary increase",
+      "body temperature",
+      "infection"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "What causes fever?",
+      "How is fever diagnosed?",
+      "What is the normal body temperature?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/fever.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 1,
+    "question": "What are the symptoms of flu?",
+    "answer": "Common symptoms include fever, cough, sore throat, muscle aches, and fatigue.",
+    "keywords": [
+      "flu",
+      "fever",
+      "cough",
+      "sore throat",
+      "muscle aches",
+      "fatigue"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "What are the common symptoms of a cold?",
+      "How is flu diagnosed?",
+      "How long does flu last?",
+      "Can flu be prevented?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/flu.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 2,
+    "question": "What should I do in case of chest pain?",
+    "answer": "Chest pain may indicate a serious condition such as a heart attack. Seek emergency medical help immediately.",
+    "keywords": [
+      "chest pain",
+      "heart attack"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "What are the symptoms of a heart attack?",
+      "When should I call an ambulance for chest pain?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/symptoms/chest-pain/",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 3,
+    "question": "What are the common symptoms of a cold?",
+    "answer": "Common cold symptoms usually include sneezing, a stuffy or runny nose, a sore throat, coughing, and sometimes a headache. Symptoms often begin a few days after infection, and some may last 10 to 14 days.",
+    "keywords": [
+      "common cold",
+      "cold symptoms",
+      "sneezing",
+      "stuffy nose",
+      "runny nose",
+      "sore throat",
+      "cough",
+      "headache"
+    ],
+    "category": "disease",
+    "severity": "low",
+    "related_questions": [
+      "How is a cold different from the flu?",
+      "How long can cold symptoms last?",
+      "When should I contact a healthcare professional about a cold?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/commoncold.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 4,
+    "question": "What are the symptoms of dehydration?",
+    "answer": "Signs of dehydration can include thirst, a dry mouth or lips, dark yellow urine, urinating less often, tiredness, dizziness, and light-headedness. Severe symptoms such as confusion, unusual drowsiness, cold skin, or difficulty breathing can indicate a medical emergency.",
+    "keywords": [
+      "dehydration",
+      "thirst",
+      "dry mouth",
+      "dark urine",
+      "urinating less",
+      "dizziness",
+      "confusion",
+      "emergency"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "What can cause dehydration?",
+      "Who is at higher risk of dehydration?",
+      "What are warning signs of severe dehydration?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/dehydration/",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 5,
+    "question": "How is the flu different from a common cold?",
+    "answer": "Flu symptoms usually begin suddenly and often include fever, muscle aches, and fatigue. Cold symptoms tend to develop more gradually and mainly affect the nose and throat. Symptoms can overlap, so this comparison cannot confirm a diagnosis.",
+    "keywords": [
+      "flu",
+      "influenza",
+      "common cold",
+      "difference",
+      "sudden symptoms",
+      "muscle aches",
+      "fatigue",
+      "diagnosis"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "What are the symptoms of flu?",
+      "What are the common symptoms of a cold?",
+      "Can flu and a cold have similar symptoms?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/flu.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 6,
+    "question": "What can cause a fever?",
+    "answer": "Fever is a higher-than-normal body temperature and is commonly a sign that the body is responding to an illness or infection. Many infections can cause it; fever alone does not identify the cause.",
+    "keywords": [
+      "fever",
+      "pyrexia",
+      "high temperature",
+      "infection",
+      "illness"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "When is a fever an emergency?",
+      "What symptoms can occur with fever?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/fever.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 7,
+    "question": "What does a cough usually mean?",
+    "answer": "A cough is a reflex that helps keep the throat and airways clear. Acute coughs commonly occur with colds or flu and often last up to 2 to 3 weeks; a cough lasting longer should be discussed with a healthcare professional.",
+    "keywords": [
+      "cough",
+      "acute cough",
+      "chronic cough",
+      "airways",
+      "cold",
+      "flu"
+    ],
+    "category": "symptom",
+    "severity": "low",
+    "related_questions": [
+      "When should a persistent cough be checked?",
+      "Can a cold cause a cough?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/cough.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 8,
+    "question": "What are common causes of a sore throat?",
+    "answer": "A sore throat, also called pharyngitis, can be caused by colds or flu and other conditions such as allergies, mononucleosis, or strep throat. The cause cannot be identified from soreness alone.",
+    "keywords": [
+      "sore throat",
+      "pharyngitis",
+      "throat pain",
+      "cold",
+      "flu",
+      "strep throat"
+    ],
+    "category": "symptom",
+    "severity": "low",
+    "related_questions": [
+      "Can a sore throat occur with a cold?",
+      "When does a sore throat need urgent care?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/sorethroat.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 9,
+    "question": "What are common causes of a headache?",
+    "answer": "Headaches can have many causes. Tension-type headaches are common, and headaches may also occur with illnesses such as a cold, flu, or fever. A headache pattern alone cannot establish a diagnosis.",
+    "keywords": [
+      "headache",
+      "head pain",
+      "tension headache",
+      "cold",
+      "flu",
+      "fever"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "What warning signs with a headache need emergency care?",
+      "What is a sudden severe headache?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/ency/article/003024.htm",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 10,
+    "question": "What is fatigue and what can cause it?",
+    "answer": "Fatigue is weariness, tiredness, or lack of energy. It can follow activity, stress, or too little sleep, but may also have medical causes; contact a healthcare professional if it persists for weeks.",
+    "keywords": [
+      "fatigue",
+      "tiredness",
+      "weariness",
+      "low energy",
+      "exhaustion"
+    ],
+    "category": "symptom",
+    "severity": "low",
+    "related_questions": [
+      "Can infections cause fatigue?",
+      "When should persistent fatigue be assessed?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/fatigue.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 11,
+    "question": "What can lead to dehydration?",
+    "answer": "Dehydration happens when the body loses more fluid than it takes in. Fever, vomiting, diarrhea, heavy sweating, or not drinking enough can contribute to fluid loss.",
+    "keywords": [
+      "dehydration",
+      "fluid loss",
+      "vomiting",
+      "diarrhea",
+      "fever",
+      "sweating"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "What are signs of dehydration?",
+      "Who is more at risk of dehydration?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/dehydration/",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 12,
+    "question": "How does influenza spread?",
+    "answer": "Influenza spreads mainly through particles released when an infected person coughs, sneezes, or talks. Less often, infection can follow touching a contaminated surface and then the mouth, nose, or eyes.",
+    "keywords": [
+      "influenza",
+      "flu",
+      "transmission",
+      "spread",
+      "cough",
+      "sneeze",
+      "droplets"
+    ],
+    "category": "transmission",
+    "severity": "medium",
+    "related_questions": [
+      "How can respiratory infections be prevented?",
+      "How does flu differ from a cold?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/flu/about/index.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 13,
+    "question": "How long does a common cold usually last?",
+    "answer": "Cold symptoms often begin a few days after infection, and some symptoms may last 10 to 14 days. If symptoms worsen or do not improve, seek advice from a healthcare professional.",
+    "keywords": [
+      "common cold",
+      "cold duration",
+      "how long",
+      "symptoms",
+      "10 to 14 days"
+    ],
+    "category": "duration",
+    "severity": "low",
+    "related_questions": [
+      "What are common cold symptoms?",
+      "When should I contact a healthcare professional about a cold?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/commoncold.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 14,
+    "question": "How can respiratory infections spread between people?",
+    "answer": "Respiratory germs can spread when people cough, sneeze, or talk, and through hands or objects contaminated with germs that are then touched to the face. The exact routes vary by germ.",
+    "keywords": [
+      "respiratory infection",
+      "transmission",
+      "spread",
+      "cough",
+      "sneeze",
+      "contaminated surfaces",
+      "hands"
+    ],
+    "category": "transmission",
+    "severity": "medium",
+    "related_questions": [
+      "How does flu spread?",
+      "How can handwashing reduce infection spread?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/hygiene/about/coughing-and-sneezing.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 15,
+    "question": "How should I wash my hands to help prevent infection?",
+    "answer": "Wash hands with soap and water, rubbing all surfaces. If soap and water are unavailable, CDC says a hand sanitizer containing at least 60% alcohol can help in community settings.",
+    "keywords": [
+      "handwashing",
+      "hand washing",
+      "soap",
+      "water",
+      "hand sanitizer",
+      "hygiene"
+    ],
+    "category": "prevention",
+    "severity": "low",
+    "related_questions": [
+      "How do respiratory infections spread?",
+      "What habits help prevent flu?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/clean-hands/faq/index.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 16,
+    "question": "What habits can help prevent respiratory infections?",
+    "answer": "Cover coughs and sneezes, clean hands, avoid close contact with people who are sick, and improve indoor air when possible. These steps can reduce spread but cannot eliminate all risk.",
+    "keywords": [
+      "respiratory infection prevention",
+      "hygiene",
+      "cover cough",
+      "handwashing",
+      "cleaner air",
+      "distancing"
+    ],
+    "category": "prevention",
+    "severity": "low",
+    "related_questions": [
+      "How should I wash my hands?",
+      "How can flu be prevented?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/respiratory-viruses/prevention/precautions-when-sick.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 17,
+    "question": "How can I reduce my risk of getting the flu?",
+    "answer": "Seasonal flu vaccination is the best way to reduce the risk of flu and serious illness. Handwashing, covering coughs and sneezes, cleaner air, and avoiding close contact with sick people can also help reduce spread.",
+    "keywords": [
+      "flu prevention",
+      "influenza vaccine",
+      "vaccination",
+      "handwashing",
+      "cleaner air"
+    ],
+    "category": "prevention",
+    "severity": "low",
+    "related_questions": [
+      "How does influenza spread?",
+      "What habits help prevent respiratory infections?"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 18,
+    "question": "Do antibiotics treat the common cold?",
+    "answer": "No. Antibiotics treat certain bacterial infections, not viruses that cause colds. Unneeded antibiotics can cause side effects; ask a healthcare professional about concerns or worsening symptoms.",
+    "keywords": [
+      "antibiotics",
+      "common cold",
+      "viral infection",
+      "virus",
+      "bacterial infection",
+      "antimicrobial resistance"
+    ],
+    "category": "treatment_information",
+    "severity": "low",
+    "related_questions": [
+      "Is the common cold caused by a virus?",
+      "When should I seek care for cold symptoms?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/antibiotic-use/about/",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 19,
+    "question": "When is difficulty breathing an emergency?",
+    "answer": "Sudden or severe difficulty breathing, or breathlessness that makes speaking difficult, needs emergency care. Call your local emergency number immediately.",
+    "keywords": [
+      "difficulty breathing",
+      "shortness of breath",
+      "breathlessness",
+      "dyspnea",
+      "emergency"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "Can respiratory infections cause breathing difficulty?",
+      "What warning signs require emergency help?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/ency/article/003075.htm",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 20,
+    "question": "What are the warning signs of a stroke?",
+    "answer": "Stroke signs can start suddenly and include facial drooping, weakness in an arm, or speech problems (FAST). Sudden vision, balance, or one-sided weakness problems also need immediate emergency help; call your local emergency number.",
+    "keywords": [
+      "stroke",
+      "FAST",
+      "face drooping",
+      "arm weakness",
+      "speech problems",
+      "sudden numbness",
+      "emergency"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "What should I do if stroke signs stop?",
+      "Can a severe headache be an emergency warning sign?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/stroke/symptoms/",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 21,
+    "question": "What should I do about a sudden, extremely severe headache?",
+    "answer": "A sudden, extremely painful headache that does not go away can signal a life-threatening problem. Call your local emergency number immediately, even if you have had other headaches before.",
+    "keywords": [
+      "sudden headache",
+      "severe headache",
+      "thunderclap headache",
+      "worst headache",
+      "emergency"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "What are warning signs of a stroke?",
+      "When does a headache need emergency care?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/subarachnoid-haemorrhage/",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 22,
+    "question": "What are signs of severe dehydration that need emergency help?",
+    "answer": "Confusion, fainting, no urination, very rapid breathing or heartbeat, or signs of shock can indicate severe dehydration. Get emergency medical help immediately by calling your local emergency number.",
+    "keywords": [
+      "severe dehydration",
+      "confusion",
+      "fainting",
+      "no urination",
+      "rapid breathing",
+      "shock",
+      "emergency"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "What are common dehydration symptoms?",
+      "What can cause dehydration?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/ency/article/000982.htm",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 23,
+    "question": "When should flu symptoms prompt urgent medical advice?",
+    "answer": "People at higher risk of severe flu complications, or anyone who is very sick or worried about flu symptoms, should contact a healthcare professional. Symptoms alone cannot confirm influenza.",
+    "keywords": [
+      "flu warning signs",
+      "influenza",
+      "high risk",
+      "severe illness",
+      "medical advice"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "What are common flu symptoms?",
+      "How can flu differ from a cold?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/flu.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 24,
+    "question": "When should a fever be treated as an emergency?",
+    "answer": "Seek emergency help for fever with difficulty breathing, blue lips, inability to wake, confusion, a very bad headache, stiff neck, or a seizure. Call your local emergency number; age-specific advice may differ for infants and children.",
+    "keywords": [
+      "fever emergency",
+      "high temperature",
+      "difficulty breathing",
+      "blue lips",
+      "confusion",
+      "stiff neck",
+      "seizure"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "What can cause a fever?",
+      "What are warning signs of severe dehydration?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/ency/article/003090.htm",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 25,
+    "question": "Can symptoms alone tell whether an illness is flu or another respiratory infection?",
+    "answer": "No. Flu symptoms overlap with those of other respiratory illnesses, so symptoms alone can make it difficult to tell them apart. A healthcare professional can advise whether evaluation or testing is appropriate.",
+    "keywords": [
+      "flu diagnosis",
+      "influenza",
+      "respiratory infection",
+      "symptom overlap",
+      "testing"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "How is flu different from a cold?",
+      "What are common flu symptoms?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/flu/about/index.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 26,
+    "question": "Who is at higher risk of serious flu complications?",
+    "answer": "Flu can become severe, and some groups have higher risk, including older adults, pregnant people, young children, and people with certain chronic conditions. Those at higher risk should contact a healthcare professional if they develop flu symptoms.",
+    "keywords": [
+      "flu risk",
+      "influenza complications",
+      "older adults",
+      "pregnancy",
+      "young children",
+      "chronic conditions"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "When should flu symptoms prompt medical advice?",
+      "How can flu be prevented?"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 27,
+    "question": "How long do flu symptoms usually last?",
+    "answer": "Many people recover from fever and other flu symptoms within about a week, although a cough can last two weeks or longer. Recovery varies, and severe or worsening symptoms need medical advice.",
+    "keywords": [
+      "flu duration",
+      "influenza",
+      "recovery",
+      "fever",
+      "cough",
+      "symptom duration"
+    ],
+    "category": "duration",
+    "severity": "medium",
+    "related_questions": [
+      "What are common flu symptoms?",
+      "When should flu symptoms prompt medical advice?"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 28,
+    "question": "How can I reduce respiratory virus spread when I am sick?",
+    "answer": "Stay home and away from others while sick when possible, cover coughs, keep hands clean, and consider cleaner air or a well-fitting mask around others. Seek emergency care immediately for trouble breathing or chest pain.",
+    "keywords": [
+      "respiratory virus",
+      "prevent transmission",
+      "stay home",
+      "mask",
+      "hand hygiene",
+      "cleaner air"
+    ],
+    "category": "prevention",
+    "severity": "medium",
+    "related_questions": [
+      "How do respiratory infections spread?",
+      "What emergency warning signs need immediate care?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/respiratory-viruses/prevention/precautions-when-sick.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 29,
+    "question": "Can a person catch a cold from contaminated hands or objects?",
+    "answer": "Yes. Cold viruses can spread through close contact or respiratory particles, and a person may become infected after touching a contaminated object and then their eyes, nose, or mouth.",
+    "keywords": [
+      "common cold",
+      "cold transmission",
+      "contaminated surfaces",
+      "hands",
+      "eyes",
+      "nose",
+      "mouth"
+    ],
+    "category": "transmission",
+    "severity": "low",
+    "related_questions": [
+      "How do respiratory infections spread?",
+      "How should I wash my hands?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/commoncold.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 30,
+    "question": "How can I prevent dehydration?",
+    "answer": "To reduce the risk of dehydration, drink fluids regularly throughout the day. Drink more fluids when you are losing more water, such as during hot weather, exercise, vomiting, or diarrhea. Pale-coloured urine can be a useful sign that you are drinking enough. Babies, young children, and older adults may need extra attention to hydration. If vomiting or diarrhea causes significant fluid loss, ask a pharmacist or healthcare professional whether an oral rehydration solution is appropriate.",
+    "keywords": [
+      "dehydration",
+      "prevention",
+      "prevent dehydration",
+      "drink fluids",
+      "hydration",
+      "oral rehydration",
+      "vomiting",
+      "diarrhea"
+    ],
+    "category": "prevention",
+    "severity": "medium",
+    "related_questions": [
+      "What are the symptoms of dehydration?",
+      "What can lead to dehydration?",
+      "What are signs of severe dehydration that need emergency help?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/dehydration/",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 31,
+    "question": "What is a heart attack?",
+    "answer": "A heart attack occurs when blood flow to part of the heart muscle is severely reduced or blocked. It is a medical emergency. Symptoms can include chest discomfort, shortness of breath, sweating, nausea, or discomfort in the arm, back, neck, jaw, or stomach. Symptoms vary, and not everyone experiences the same signs. If a heart attack is suspected, seek emergency medical help immediately.",
+    "keywords": [
+      "heart attack",
+      "myocardial infarction",
+      "heart",
+      "blocked blood flow",
+      "chest discomfort",
+      "emergency"
+    ],
+    "category": "disease",
+    "severity": "high",
+    "related_questions": [
+      "What are the symptoms of a heart attack?",
+      "What should I do in case of chest pain?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/heartattack.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 32,
+    "question": "What are the common symptoms of diabetes?",
+    "answer": "Common symptoms of diabetes can include increased thirst, frequent urination, increased hunger, unintended weight loss, fatigue, and blurred vision. Some people, especially those with type 2 diabetes, may have few or no noticeable symptoms. Symptoms alone cannot confirm diabetes; a healthcare professional can arrange appropriate testing.",
+    "keywords": [
+      "diabetes",
+      "diabetes symptoms",
+      "increased thirst",
+      "frequent urination",
+      "hunger",
+      "unintended weight loss",
+      "fatigue",
+      "blurred vision",
+      "blood glucose",
+      "high blood sugar",
+      "high blood glucose",
+      "elevated blood glucose",
+      "frequent urination",
+      "urinating frequently",
+      "peeing often",
+      "feeling thirsty",
+      "increased thirst",
+      "diabetes warning signs"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "What is diabetes?",
+      "How is diabetes diagnosed?",
+      "What are the risk factors for type 2 diabetes?",
+      "What are the signs of high blood sugar?",
+      "Can frequent urination and increased thirst be symptoms of diabetes?",
+      "What are the warning signs of diabetes?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/diabetes/signs-symptoms/index.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 33,
+    "question": "What is high blood pressure?",
+    "answer": "High blood pressure, also called hypertension, means that the pressure of blood against artery walls is consistently too high. It often has no noticeable symptoms, so measuring blood pressure is important. A healthcare professional can interpret measurements and advise on appropriate next steps.",
+    "keywords": [
+      "high blood pressure",
+      "hypertension",
+      "blood pressure",
+      "blood pressure measurement",
+      "cardiovascular health"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "What are the risk factors for high blood pressure?",
+      "How is high blood pressure diagnosed?",
+      "How can blood pressure be managed?"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/fact-sheets/detail/hypertension",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 34,
+    "question": "What is blood glucose?",
+    "answer": "Blood glucose is the amount of glucose, a type of sugar, in the blood. The body uses glucose for energy. Blood glucose levels can be measured using appropriate tests, and the interpretation depends on the type and timing of the test. A healthcare professional can explain what an individual result means.",
+    "keywords": [
+      "blood glucose",
+      "blood sugar",
+      "glucose",
+      "blood glucose test",
+      "diabetes",
+      "glucose levels"
+    ],
+    "category": "medical_information",
+    "severity": "low",
+    "related_questions": [
+      "What are the common symptoms of diabetes?",
+      "How is diabetes diagnosed?",
+      "What do blood glucose test results mean?"
+    ],
+    "source_name": "NIDDK",
+    "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 35,
+    "question": "What are the signs of high blood sugar?",
+    "answer": "High blood sugar, also called hyperglycemia, can cause increased thirst, frequent urination, tiredness or weakness, headaches, and blurred vision. Some people may also experience confusion or unusual sleepiness. Symptoms alone cannot confirm high blood sugar; a blood glucose measurement and appropriate medical assessment may be needed. If severe symptoms occur, especially confusion or unusual drowsiness, seek urgent medical advice.",
+    "keywords": [
+      "high blood sugar",
+      "high blood glucose",
+      "hyperglycemia",
+      "elevated blood sugar",
+      "increased thirst",
+      "frequent urination",
+      "tiredness",
+      "weakness",
+      "headache",
+      "blurred vision",
+      "confusion"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "What are the common symptoms of diabetes?",
+      "What is blood glucose?",
+      "How is high blood sugar diagnosed?",
+      "What is hyperglycemia?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/hyperglycemia.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 36,
+    "question": "Does high blood sugar always mean diabetes?",
+    "answer": "No. High blood glucose can be a sign of prediabetes or diabetes, but it does not always mean that a person has diabetes. Blood glucose can also rise temporarily because of illness, stress, trauma, or certain medicines. A healthcare professional should interpret the results and may recommend appropriate laboratory tests to determine the cause. Symptoms alone cannot establish a diagnosis.",
+    "keywords": [
+      "high blood sugar",
+      "high blood glucose",
+      "hyperglycemia",
+      "diabetes diagnosis",
+      "prediabetes",
+      "temporary high glucose",
+      "stress",
+      "illness",
+      "medication side effects"
+    ],
+    "category": "medical_information",
+    "severity": "medium",
+    "related_questions": [
+      "Can high blood sugar occur without diabetes?",
+      "What can cause high blood glucose?",
+      "Does hyperglycemia always mean diabetes?",
+      "How is diabetes diagnosed?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/lab-tests/blood-glucose-test/",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 37,
+    "question": "Qu’est-ce que la fièvre ?",
+    "answer": "La fièvre est une hausse temporaire de la température corporelle, souvent due à une infection.",
+    "keywords": [
+      "fièvre",
+      "hausse temporaire",
+      "température corporelle",
+      "infection"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "Qu’est-ce qu’une température élevée ?",
+      "Quelles sont les causes de la fièvre ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/fever.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 38,
+    "question": "ما الحمى؟",
+    "answer": "الحمى هي ارتفاع مؤقت في درجة حرارة الجسم، وغالبًا ما يكون سببه عدوى.",
+    "keywords": [
+      "الحمى",
+      "ارتفاع مؤقت",
+      "درجة حرارة الجسم",
+      "عدوى"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "ما المقصود بارتفاع درجة الحرارة؟",
+      "ما أسباب الحمى؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/fever.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 39,
+    "question": "Quels sont les symptômes de la grippe ?",
+    "answer": "Les symptômes courants comprennent la fièvre, la toux, le mal de gorge, les douleurs musculaires et la fatigue.",
+    "keywords": [
+      "grippe",
+      "fièvre",
+      "toux",
+      "mal de gorge",
+      "douleurs musculaires",
+      "fatigue"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "Quels sont les symptômes de la grippe ?",
+      "Comment distinguer la grippe d’un rhume ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/flu.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 40,
+    "question": "ما أعراض الإنفلونزا؟",
+    "answer": "تشمل الأعراض الشائعة الحمى والسعال والتهاب الحلق وآلام العضلات والإرهاق.",
+    "keywords": [
+      "الإنفلونزا",
+      "الحمى",
+      "السعال",
+      "التهاب الحلق",
+      "آلام العضلات",
+      "الإرهاق"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "ما أعراض الإنفلونزا؟",
+      "كيف تختلف الإنفلونزا عن الزكام؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/flu.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 41,
+    "question": "Que faire en cas de douleur thoracique ?",
+    "answer": "Une douleur thoracique peut signaler une affection grave, comme une crise cardiaque. Demandez immédiatement une aide médicale d’urgence.",
+    "keywords": [
+      "douleur thoracique",
+      "crise cardiaque",
+      "urgence",
+      "aide médicale immédiate"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "Que faire si j’ai mal à la poitrine ?",
+      "Quand une douleur thoracique est-elle une urgence ?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/symptoms/chest-pain/",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 42,
+    "question": "ماذا أفعل عند الشعور بألم في الصدر؟",
+    "answer": "قد يشير ألم الصدر إلى حالة خطيرة مثل النوبة القلبية. اطلب المساعدة الطبية الطارئة فورًا.",
+    "keywords": [
+      "ألم الصدر",
+      "النوبة القلبية",
+      "حالة طارئة",
+      "مساعدة طبية فورية"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "ماذا أفعل إذا شعرت بألم في الصدر؟",
+      "متى يكون ألم الصدر حالة طارئة؟"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/symptoms/chest-pain/",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 43,
+    "question": "Quels sont les symptômes courants d’un rhume ?",
+    "answer": "Les symptômes courants du rhume comprennent généralement les éternuements, le nez bouché ou qui coule, le mal de gorge, la toux et parfois un mal de tête. Ils commencent souvent quelques jours après l’infection, et certains peuvent durer de 10 à 14 jours.",
+    "keywords": [
+      "rhume",
+      "symptômes du rhume",
+      "éternuements",
+      "nez bouché",
+      "nez qui coule",
+      "mal de gorge",
+      "toux",
+      "mal de tête"
+    ],
+    "category": "disease",
+    "severity": "low",
+    "related_questions": [
+      "Quels sont les symptômes du rhume ?",
+      "Combien de temps dure généralement un rhume ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/commoncold.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 44,
+    "question": "ما الأعراض الشائعة للزكام؟",
+    "answer": "تشمل أعراض الزكام الشائعة عادةً العطاس وانسداد الأنف أو سيلانه والتهاب الحلق والسعال وأحيانًا الصداع. تبدأ الأعراض غالبًا بعد بضعة أيام من العدوى، وقد يستمر بعضها من 10 إلى 14 يومًا.",
+    "keywords": [
+      "الزكام",
+      "أعراض الزكام",
+      "العطاس",
+      "انسداد الأنف",
+      "سيلان الأنف",
+      "التهاب الحلق",
+      "السعال",
+      "الصداع"
+    ],
+    "category": "disease",
+    "severity": "low",
+    "related_questions": [
+      "ما أعراض الزكام؟",
+      "كم تستمر أعراض الزكام عادةً؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/commoncold.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 45,
+    "question": "Quels sont les symptômes de la déshydratation ?",
+    "answer": "Les signes de déshydratation peuvent comprendre la soif, une bouche ou des lèvres sèches, des urines jaune foncé, des mictions moins fréquentes, la fatigue, des étourdissements et une sensation de tête légère. Des signes graves, comme la confusion, une somnolence inhabituelle, une peau froide ou des difficultés respiratoires, peuvent indiquer une urgence médicale.",
+    "keywords": [
+      "déshydratation",
+      "soif",
+      "bouche sèche",
+      "urines foncées",
+      "uriner moins souvent",
+      "fatigue",
+      "étourdissements",
+      "confusion",
+      "urgence"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "Quels sont les signes de déshydratation ?",
+      "Quels signes de déshydratation nécessitent une aide urgente ?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/dehydration/",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 46,
+    "question": "ما أعراض الجفاف؟",
+    "answer": "قد تشمل علامات الجفاف العطش وجفاف الفم أو الشفتين والبول الداكن وقلة التبول والتعب والدوخة وخفة الرأس. وقد تشير العلامات الشديدة، مثل الارتباك أو النعاس غير المعتاد أو برودة الجلد أو صعوبة التنفس، إلى حالة طبية طارئة.",
+    "keywords": [
+      "الجفاف",
+      "العطش",
+      "جفاف الفم",
+      "بول داكن",
+      "قلة التبول",
+      "التعب",
+      "الدوخة",
+      "الارتباك",
+      "الطوارئ"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "ما علامات الجفاف؟",
+      "ما علامات الجفاف التي تستدعي مساعدة عاجلة؟"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/dehydration/",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 47,
+    "question": "Quelle est la différence entre la grippe et un rhume ?",
+    "answer": "Les symptômes de la grippe commencent généralement soudainement et comprennent souvent de la fièvre, des douleurs musculaires et de la fatigue. Ceux du rhume apparaissent plutôt progressivement et touchent surtout le nez et la gorge. Les symptômes peuvent se chevaucher; cette comparaison ne permet donc pas de confirmer un diagnostic.",
+    "keywords": [
+      "grippe",
+      "influenza",
+      "rhume",
+      "différence",
+      "début soudain",
+      "douleurs musculaires",
+      "fatigue",
+      "diagnostic"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "Comment distinguer la grippe d’un rhume ?",
+      "Les symptômes seuls permettent-ils de distinguer la grippe d’un rhume ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/flu.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 48,
+    "question": "ما الفرق بين الإنفلونزا والزكام؟",
+    "answer": "تبدأ أعراض الإنفلونزا عادةً فجأة، وغالبًا ما تشمل الحمى وآلام العضلات والإرهاق. أما أعراض الزكام فتتطور تدريجيًا وتصيب الأنف والحلق أساسًا. وقد تتداخل الأعراض، لذلك لا تكفي هذه المقارنة لتأكيد تشخيص.",
+    "keywords": [
+      "الإنفلونزا",
+      "الزكام",
+      "الفرق",
+      "بداية مفاجئة",
+      "آلام العضلات",
+      "الإرهاق",
+      "التشخيص"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "كيف أميّز الإنفلونزا عن الزكام؟",
+      "هل تكفي الأعراض وحدها للتمييز بين الإنفلونزا والزكام؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/flu.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 49,
+    "question": "Quelles sont les causes possibles de la fièvre ?",
+    "answer": "La fièvre correspond à une température corporelle supérieure à la normale et indique souvent que le corps réagit à une maladie ou à une infection. De nombreuses infections peuvent la provoquer; la fièvre seule n’en identifie pas la cause.",
+    "keywords": [
+      "fièvre",
+      "pyrexie",
+      "température élevée",
+      "infection",
+      "maladie"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "Qu’est-ce qui peut provoquer de la fièvre ?",
+      "La fièvre seule permet-elle d’en connaître la cause ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/fever.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 50,
+    "question": "ما الأسباب المحتملة للحمى؟",
+    "answer": "الحمى هي ارتفاع درجة حرارة الجسم عن المعدل الطبيعي، وغالبًا ما تكون علامة على استجابة الجسم لمرض أو عدوى. يمكن لعدوى كثيرة أن تسببها؛ ولا تحدد الحمى وحدها السبب.",
+    "keywords": [
+      "الحمى",
+      "ارتفاع الحرارة",
+      "عدوى",
+      "مرض"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "ما الذي قد يسبب الحمى؟",
+      "هل تكفي الحمى وحدها لمعرفة السبب؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/fever.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 51,
+    "question": "Que signifie généralement une toux ?",
+    "answer": "La toux est un réflexe qui aide à dégager la gorge et les voies respiratoires. Une toux aiguë survient souvent avec un rhume ou la grippe et dure fréquemment jusqu’à deux ou trois semaines; une toux qui persiste plus longtemps doit être discutée avec un professionnel de santé.",
+    "keywords": [
+      "toux",
+      "toux aiguë",
+      "toux chronique",
+      "voies respiratoires",
+      "rhume",
+      "grippe"
+    ],
+    "category": "symptom",
+    "severity": "low",
+    "related_questions": [
+      "Que peut signifier une toux ?",
+      "Combien de temps une toux peut-elle durer ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/cough.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 52,
+    "question": "ماذا يعني السعال عادةً؟",
+    "answer": "السعال رد فعل يساعد على إبقاء الحلق والممرات الهوائية خالية. يحدث السعال الحاد غالبًا مع الزكام أو الإنفلونزا، وقد يستمر عادةً حتى أسبوعين أو ثلاثة؛ وينبغي استشارة مختص صحي إذا استمر مدة أطول.",
+    "keywords": [
+      "السعال",
+      "السعال الحاد",
+      "السعال المزمن",
+      "الممرات الهوائية",
+      "الزكام",
+      "الإنفلونزا"
+    ],
+    "category": "symptom",
+    "severity": "low",
+    "related_questions": [
+      "ماذا قد يعني السعال؟",
+      "كم قد يستمر السعال؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/cough.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 53,
+    "question": "Quelles sont les causes courantes d’un mal de gorge ?",
+    "answer": "Un mal de gorge, aussi appelé pharyngite, peut être causé par un rhume ou la grippe, ainsi que par d’autres affections comme les allergies, la mononucléose ou une angine à streptocoque. La douleur seule ne permet pas d’identifier la cause.",
+    "keywords": [
+      "mal de gorge",
+      "pharyngite",
+      "douleur de gorge",
+      "rhume",
+      "grippe",
+      "angine à streptocoque",
+      "allergies"
+    ],
+    "category": "symptom",
+    "severity": "low",
+    "related_questions": [
+      "Quelles sont les causes d’un mal de gorge ?",
+      "Peut-on déterminer la cause d’un mal de gorge à partir de la douleur seule ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/sorethroat.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 54,
+    "question": "ما الأسباب الشائعة لالتهاب الحلق؟",
+    "answer": "قد ينتج التهاب الحلق عن الزكام أو الإنفلونزا، وكذلك عن حالات أخرى مثل الحساسية أو داء كثرة الوحيدات أو التهاب الحلق العقدي. ولا يمكن تحديد السبب من الألم وحده.",
+    "keywords": [
+      "التهاب الحلق",
+      "ألم الحلق",
+      "الزكام",
+      "الإنفلونزا",
+      "التهاب عقدي",
+      "الحساسية"
+    ],
+    "category": "symptom",
+    "severity": "low",
+    "related_questions": [
+      "ما أسباب التهاب الحلق؟",
+      "هل يمكن تحديد سبب التهاب الحلق من الألم وحده؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/sorethroat.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 55,
+    "question": "Quelles sont les causes courantes d’un mal de tête ?",
+    "answer": "Les maux de tête peuvent avoir de nombreuses causes. Les céphalées de tension sont courantes, et un mal de tête peut aussi accompagner des maladies comme un rhume, la grippe ou la fièvre. Le type de mal de tête ne suffit pas à établir un diagnostic.",
+    "keywords": [
+      "mal de tête",
+      "céphalée",
+      "céphalée de tension",
+      "rhume",
+      "grippe",
+      "fièvre"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "Quelles sont les causes d’un mal de tête ?",
+      "Un mal de tête permet-il à lui seul d’établir un diagnostic ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/ency/article/003024.htm",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 56,
+    "question": "ما الأسباب الشائعة للصداع؟",
+    "answer": "قد يكون للصداع أسباب كثيرة. والصداع التوتري شائع، كما قد يحدث الصداع مع أمراض مثل الزكام أو الإنفلونزا أو الحمى. ولا يكفي نمط الصداع وحده لإثبات تشخيص.",
+    "keywords": [
+      "الصداع",
+      "صداع توتري",
+      "الزكام",
+      "الإنفلونزا",
+      "الحمى"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "ما أسباب الصداع؟",
+      "هل يكفي الصداع وحده لإثبات تشخيص؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/ency/article/003024.htm",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 57,
+    "question": "Qu’est-ce que la fatigue et quelles en sont les causes possibles ?",
+    "answer": "La fatigue est une sensation d’épuisement, de lassitude ou de manque d’énergie. Elle peut survenir après une activité, du stress ou un manque de sommeil, mais elle peut aussi avoir des causes médicales; contactez un professionnel de santé si elle persiste pendant des semaines.",
+    "keywords": [
+      "fatigue",
+      "lassitude",
+      "manque d’énergie",
+      "épuisement",
+      "stress",
+      "sommeil"
+    ],
+    "category": "symptom",
+    "severity": "low",
+    "related_questions": [
+      "Qu’est-ce que la fatigue ?",
+      "Quand faut-il demander conseil pour une fatigue persistante ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/fatigue.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 58,
+    "question": "ما التعب وما أسبابه المحتملة؟",
+    "answer": "التعب هو شعور بالإرهاق أو الوهن أو نقص الطاقة. قد يحدث بعد النشاط أو التوتر أو قلة النوم، وقد تكون له أسباب طبية أيضًا؛ تواصل مع مختص صحي إذا استمر لأسابيع.",
+    "keywords": [
+      "التعب",
+      "الإرهاق",
+      "الوهن",
+      "نقص الطاقة",
+      "التوتر",
+      "النوم"
+    ],
+    "category": "symptom",
+    "severity": "low",
+    "related_questions": [
+      "ما المقصود بالتعب؟",
+      "متى ينبغي طلب المشورة بشأن التعب المستمر؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/fatigue.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 59,
+    "question": "Qu’est-ce qui peut entraîner une déshydratation ?",
+    "answer": "La déshydratation survient lorsque le corps perd plus de liquide qu’il n’en absorbe. La fièvre, les vomissements, la diarrhée, une forte transpiration ou le fait de ne pas boire suffisamment peuvent contribuer à cette perte de liquide.",
+    "keywords": [
+      "déshydratation",
+      "perte de liquide",
+      "vomissements",
+      "diarrhée",
+      "fièvre",
+      "transpiration"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "Quelles sont les causes de la déshydratation ?",
+      "Le fait de ne pas boire assez peut-il entraîner une déshydratation ?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/dehydration/",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 60,
+    "question": "ما الذي قد يؤدي إلى الجفاف؟",
+    "answer": "يحدث الجفاف عندما يفقد الجسم سوائل أكثر مما يتناوله. وقد تسهم الحمى أو القيء أو الإسهال أو التعرق الشديد أو عدم شرب كمية كافية في فقدان السوائل.",
+    "keywords": [
+      "الجفاف",
+      "فقدان السوائل",
+      "القيء",
+      "الإسهال",
+      "الحمى",
+      "التعرق"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "ما أسباب الجفاف؟",
+      "هل يمكن أن يؤدي عدم شرب كمية كافية إلى الجفاف؟"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/dehydration/",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 61,
+    "question": "Comment l’influenza se transmet-elle ?",
+    "answer": "L’influenza se transmet principalement par des particules libérées lorsqu’une personne infectée tousse, éternue ou parle. Plus rarement, l’infection peut survenir après avoir touché une surface contaminée puis la bouche, le nez ou les yeux.",
+    "keywords": [
+      "influenza",
+      "grippe",
+      "transmission",
+      "propagation",
+      "toux",
+      "éternuement",
+      "gouttelettes"
+    ],
+    "category": "transmission",
+    "severity": "medium",
+    "related_questions": [
+      "Comment la grippe se propage-t-elle ?",
+      "La grippe peut-elle se transmettre par des surfaces contaminées ?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/flu/about/index.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 62,
+    "question": "كيف تنتقل الإنفلونزا؟",
+    "answer": "تنتقل الإنفلونزا أساسًا عبر الجسيمات التي يطلقها الشخص المصاب عند السعال أو العطاس أو الكلام. وبشكل أقل شيوعًا، قد تحدث العدوى بعد لمس سطح ملوث ثم لمس الفم أو الأنف أو العينين.",
+    "keywords": [
+      "الإنفلونزا",
+      "الانتقال",
+      "الانتشار",
+      "السعال",
+      "العطاس",
+      "الجسيمات"
+    ],
+    "category": "transmission",
+    "severity": "medium",
+    "related_questions": [
+      "كيف تنتشر الإنفلونزا؟",
+      "هل يمكن أن تنتقل الإنفلونزا عبر الأسطح الملوثة؟"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/flu/about/index.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 63,
+    "question": "Combien de temps dure généralement un rhume ?",
+    "answer": "Les symptômes du rhume commencent souvent quelques jours après l’infection, et certains peuvent durer de 10 à 14 jours. Demandez conseil à un professionnel de santé si les symptômes s’aggravent ou ne s’améliorent pas.",
+    "keywords": [
+      "rhume",
+      "durée du rhume",
+      "combien de temps",
+      "symptômes",
+      "10 à 14 jours"
+    ],
+    "category": "duration",
+    "severity": "low",
+    "related_questions": [
+      "Combien de temps durent les symptômes du rhume ?",
+      "Quand consulter pour un rhume qui s’aggrave ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/commoncold.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 64,
+    "question": "كم يستمر الزكام عادةً؟",
+    "answer": "تبدأ أعراض الزكام غالبًا بعد بضعة أيام من العدوى، وقد يستمر بعضها من 10 إلى 14 يومًا. اطلب المشورة من مختص صحي إذا ساءت الأعراض أو لم تتحسن.",
+    "keywords": [
+      "الزكام",
+      "مدة الزكام",
+      "مدة الأعراض",
+      "10 إلى 14 يومًا"
+    ],
+    "category": "duration",
+    "severity": "low",
+    "related_questions": [
+      "كم تستمر أعراض الزكام؟",
+      "متى ينبغي استشارة مختص بشأن الزكام؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/commoncold.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 65,
+    "question": "Comment les infections respiratoires se transmettent-elles entre les personnes ?",
+    "answer": "Les microbes respiratoires peuvent se propager lorsqu’une personne tousse, éternue ou parle, ainsi que par les mains ou les objets contaminés que l’on porte ensuite au visage. Les voies exactes varient selon le microbe.",
+    "keywords": [
+      "infection respiratoire",
+      "transmission",
+      "propagation",
+      "toux",
+      "éternuement",
+      "surfaces contaminées",
+      "mains"
+    ],
+    "category": "transmission",
+    "severity": "medium",
+    "related_questions": [
+      "Comment les infections respiratoires se propagent-elles ?",
+      "Les microbes respiratoires peuvent-ils se transmettre par les mains ?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/hygiene/about/coughing-and-sneezing.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 66,
+    "question": "كيف تنتقل العدوى التنفسية بين الأشخاص؟",
+    "answer": "قد تنتشر الجراثيم التنفسية عندما يسعل الأشخاص أو يعطسون أو يتحدثون، وكذلك عبر الأيدي أو الأشياء الملوثة التي تُلمس ثم يُلمس بها الوجه. وتختلف طرق الانتقال الدقيقة باختلاف الجرثومة.",
+    "keywords": [
+      "عدوى تنفسية",
+      "الانتقال",
+      "الانتشار",
+      "السعال",
+      "العطاس",
+      "أسطح ملوثة",
+      "الأيدي"
+    ],
+    "category": "transmission",
+    "severity": "medium",
+    "related_questions": [
+      "كيف تنتشر العدوى التنفسية؟",
+      "هل يمكن أن تنتقل الجراثيم التنفسية عبر الأيدي؟"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/hygiene/about/coughing-and-sneezing.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 67,
+    "question": "Comment se laver les mains pour aider à prévenir les infections ?",
+    "answer": "Lavez-vous les mains à l’eau et au savon en frottant toutes les surfaces. Si l’eau et le savon ne sont pas disponibles, le CDC indique qu’un désinfectant pour les mains contenant au moins 60 % d’alcool peut aider dans les lieux communautaires.",
+    "keywords": [
+      "lavage des mains",
+      "savon",
+      "eau",
+      "désinfectant pour les mains",
+      "hygiène",
+      "60 % d’alcool"
+    ],
+    "category": "prevention",
+    "severity": "low",
+    "related_questions": [
+      "Comment bien se laver les mains ?",
+      "Quelle teneur en alcool un désinfectant pour les mains doit-il contenir ?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/clean-hands/faq/index.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 68,
+    "question": "كيف أغسل يدي للمساعدة في الوقاية من العدوى؟",
+    "answer": "اغسل يديك بالماء والصابون مع فرك جميع الأسطح. وإذا لم يتوفر الماء والصابون، يذكر مركز مكافحة الأمراض والوقاية منها أن معقم اليدين الذي يحتوي على 60٪ من الكحول على الأقل قد يساعد في الأماكن العامة.",
+    "keywords": [
+      "غسل اليدين",
+      "الصابون",
+      "الماء",
+      "معقم اليدين",
+      "النظافة",
+      "60٪ كحول"
+    ],
+    "category": "prevention",
+    "severity": "low",
+    "related_questions": [
+      "كيف أغسل يديّ جيدًا؟",
+      "ما نسبة الكحول المناسبة في معقم اليدين؟"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/clean-hands/faq/index.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 69,
+    "question": "Quelles habitudes peuvent aider à prévenir les infections respiratoires ?",
+    "answer": "Couvrez-vous lorsque vous toussez ou éternuez, nettoyez-vous les mains, évitez les contacts rapprochés avec les personnes malades et améliorez l’aération intérieure lorsque c’est possible. Ces mesures peuvent réduire la propagation, sans éliminer tous les risques.",
+    "keywords": [
+      "prévention des infections respiratoires",
+      "hygiène",
+      "couvrir la toux",
+      "lavage des mains",
+      "air intérieur",
+      "distanciation"
+    ],
+    "category": "prevention",
+    "severity": "low",
+    "related_questions": [
+      "Comment réduire la propagation des infections respiratoires ?",
+      "Ces mesures éliminent-elles tout risque d’infection ?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/respiratory-viruses/prevention/precautions-when-sick.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 70,
+    "question": "ما العادات التي قد تساعد في الوقاية من العدوى التنفسية؟",
+    "answer": "غطِّ فمك عند السعال أو العطاس، ونظّف يديك، وتجنب المخالطة القريبة للمرضى، وحسّن تهوية الأماكن الداخلية متى أمكن. قد تقلل هذه الخطوات من الانتشار لكنها لا تزيل المخاطر كلها.",
+    "keywords": [
+      "الوقاية من العدوى التنفسية",
+      "النظافة",
+      "تغطية السعال",
+      "غسل اليدين",
+      "تهوية الأماكن",
+      "التباعد"
+    ],
+    "category": "prevention",
+    "severity": "low",
+    "related_questions": [
+      "كيف يمكن الحد من انتشار العدوى التنفسية؟",
+      "هل تزيل هذه الخطوات جميع مخاطر العدوى؟"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/respiratory-viruses/prevention/precautions-when-sick.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 71,
+    "question": "Comment réduire le risque de contracter la grippe ?",
+    "answer": "La vaccination saisonnière contre la grippe est le meilleur moyen de réduire le risque de grippe et de maladie grave. Le lavage des mains, le fait de couvrir la toux et les éternuements, une meilleure qualité de l’air et l’évitement des contacts rapprochés avec les personnes malades peuvent aussi aider à réduire la propagation.",
+    "keywords": [
+      "prévention de la grippe",
+      "vaccin contre la grippe",
+      "vaccination",
+      "lavage des mains",
+      "air plus propre"
+    ],
+    "category": "prevention",
+    "severity": "low",
+    "related_questions": [
+      "Comment réduire le risque de grippe ?",
+      "La vaccination peut-elle réduire le risque de grippe grave ?"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 72,
+    "question": "كيف أُقلل خطر الإصابة بالإنفلونزا؟",
+    "answer": "التطعيم الموسمي ضد الإنفلونزا هو أفضل وسيلة لتقليل خطر الإصابة بها والمرض الشديد. كما قد يساعد غسل اليدين وتغطية السعال والعطاس وتحسين جودة الهواء وتجنب المخالطة القريبة للمرضى في الحد من الانتشار.",
+    "keywords": [
+      "الوقاية من الإنفلونزا",
+      "لقاح الإنفلونزا",
+      "التطعيم",
+      "غسل اليدين",
+      "هواء أنقى"
+    ],
+    "category": "prevention",
+    "severity": "low",
+    "related_questions": [
+      "كيف أقلل خطر الإصابة بالإنفلونزا؟",
+      "هل يقلل التطعيم خطر الإنفلونزا الشديدة؟"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 73,
+    "question": "Les antibiotiques traitent-ils le rhume ?",
+    "answer": "Non. Les antibiotiques traitent certaines infections bactériennes, et non les virus responsables du rhume. Les antibiotiques utilisés inutilement peuvent provoquer des effets secondaires; demandez conseil à un professionnel de santé en cas d’inquiétude ou d’aggravation des symptômes.",
+    "keywords": [
+      "antibiotiques",
+      "rhume",
+      "infection virale",
+      "virus",
+      "infection bactérienne",
+      "résistance aux antimicrobiens"
+    ],
+    "category": "treatment_information",
+    "severity": "low",
+    "related_questions": [
+      "Les antibiotiques peuvent-ils soigner un rhume ?",
+      "Que faire si les symptômes s’aggravent ?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/antibiotic-use/about/",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 74,
+    "question": "هل تعالج المضادات الحيوية الزكام؟",
+    "answer": "لا. تعالج المضادات الحيوية بعض العدوى البكتيرية، وليس الفيروسات المسببة للزكام. وقد تسبب المضادات الحيوية المستخدمة دون حاجة آثارًا جانبية؛ استشر مختصًا صحيًا إذا كنت قلقًا أو ساءت الأعراض.",
+    "keywords": [
+      "المضادات الحيوية",
+      "الزكام",
+      "عدوى فيروسية",
+      "فيروس",
+      "عدوى بكتيرية",
+      "مقاومة مضادات الميكروبات"
+    ],
+    "category": "treatment_information",
+    "severity": "low",
+    "related_questions": [
+      "هل تعالج المضادات الحيوية الزكام؟",
+      "ماذا أفعل إذا ساءت الأعراض؟"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/antibiotic-use/about/",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 75,
+    "question": "Quand les difficultés respiratoires constituent-elles une urgence ?",
+    "answer": "Une difficulté respiratoire soudaine ou sévère, ou un essoufflement qui empêche de parler, nécessite des soins d’urgence. Appelez immédiatement le numéro d’urgence local.",
+    "keywords": [
+      "difficulté à respirer",
+      "essoufflement",
+      "dyspnée",
+      "urgence"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "Quand l’essoufflement est-il une urgence ?",
+      "Que faire en cas de difficulté respiratoire sévère ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/ency/article/003075.htm",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 76,
+    "question": "متى تكون صعوبة التنفس حالة طارئة؟",
+    "answer": "تتطلب صعوبة التنفس المفاجئة أو الشديدة، أو ضيق النفس الذي يجعل الكلام صعبًا، رعاية طارئة. اتصل فورًا برقم الطوارئ المحلي.",
+    "keywords": [
+      "صعوبة التنفس",
+      "ضيق النفس",
+      "عسر التنفس",
+      "الطوارئ"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "متى يكون ضيق النفس حالة طارئة؟",
+      "ماذا أفعل عند صعوبة التنفس الشديدة؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/ency/article/003075.htm",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 77,
+    "question": "Quels sont les signes avant-coureurs d’un AVC ?",
+    "answer": "Les signes d’un AVC peuvent apparaître soudainement et comprennent un affaissement du visage, une faiblesse d’un bras ou des troubles de la parole (FAST). Des troubles soudains de la vision ou de l’équilibre, ou une faiblesse d’un côté du corps, nécessitent aussi une aide urgente; appelez le numéro d’urgence local.",
+    "keywords": [
+      "AVC",
+      "FAST",
+      "visage qui s’affaisse",
+      "faiblesse du bras",
+      "troubles de la parole",
+      "engourdissement soudain",
+      "urgence"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "Quels sont les signes d’un AVC ?",
+      "Que faire si des signes d’AVC apparaissent soudainement ?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/stroke/symptoms/",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 78,
+    "question": "ما العلامات التحذيرية للسكتة الدماغية؟",
+    "answer": "قد تظهر علامات السكتة الدماغية فجأة، ومنها تدلي الوجه أو ضعف الذراع أو صعوبة الكلام (FAST). كما تستدعي مشكلات الرؤية أو التوازن المفاجئة أو ضعف أحد جانبي الجسم مساعدة طارئة؛ اتصل برقم الطوارئ المحلي.",
+    "keywords": [
+      "السكتة الدماغية",
+      "FAST",
+      "تدلي الوجه",
+      "ضعف الذراع",
+      "صعوبة الكلام",
+      "خدر مفاجئ",
+      "الطوارئ"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "ما علامات السكتة الدماغية؟",
+      "ماذا أفعل إذا ظهرت علامات السكتة الدماغية فجأة؟"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/stroke/symptoms/",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 79,
+    "question": "Que faire en cas de mal de tête soudain et extrêmement intense ?",
+    "answer": "Un mal de tête soudain, extrêmement douloureux et persistant peut signaler un problème mettant la vie en danger. Appelez immédiatement le numéro d’urgence local, même si vous avez déjà eu d’autres maux de tête.",
+    "keywords": [
+      "mal de tête soudain",
+      "mal de tête sévère",
+      "céphalée en coup de tonnerre",
+      "pire mal de tête",
+      "urgence"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "Quand un mal de tête soudain est-il une urgence ?",
+      "Que faire en cas de mal de tête extrêmement intense ?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/subarachnoid-haemorrhage/",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 80,
+    "question": "ماذا أفعل عند حدوث صداع مفاجئ وشديد للغاية؟",
+    "answer": "قد يشير الصداع المفاجئ والشديد للغاية الذي لا يزول إلى مشكلة تهدد الحياة. اتصل فورًا برقم الطوارئ المحلي، حتى لو سبق أن أصبت بصداع من قبل.",
+    "keywords": [
+      "صداع مفاجئ",
+      "صداع شديد",
+      "صداع كالصاعقة",
+      "أسوأ صداع",
+      "الطوارئ"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "متى يكون الصداع المفاجئ حالة طارئة؟",
+      "ماذا أفعل عند حدوث صداع شديد للغاية؟"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/subarachnoid-haemorrhage/",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 81,
+    "question": "Quels signes de déshydratation sévère nécessitent une aide d’urgence ?",
+    "answer": "La confusion, l’évanouissement, l’absence d’urines, une respiration ou un rythme cardiaque très rapides, ou des signes de choc peuvent indiquer une déshydratation sévère. Obtenez immédiatement une aide médicale d’urgence en appelant le numéro d’urgence local.",
+    "keywords": [
+      "déshydratation sévère",
+      "confusion",
+      "évanouissement",
+      "absence d’urines",
+      "respiration rapide",
+      "choc",
+      "urgence"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "Quels sont les signes d’une déshydratation sévère ?",
+      "Que faire en cas de déshydratation sévère ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/ency/article/000982.htm",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 82,
+    "question": "ما علامات الجفاف الشديد التي تستدعي مساعدة طارئة؟",
+    "answer": "قد يشير الارتباك أو الإغماء أو انقطاع التبول أو سرعة التنفس أو ضربات القلب الشديدة أو علامات الصدمة إلى جفاف شديد. اطلب مساعدة طبية طارئة فورًا بالاتصال برقم الطوارئ المحلي.",
+    "keywords": [
+      "الجفاف الشديد",
+      "الارتباك",
+      "الإغماء",
+      "انقطاع التبول",
+      "سرعة التنفس",
+      "الصدمة",
+      "الطوارئ"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "ما علامات الجفاف الشديد؟",
+      "ماذا أفعل عند الإصابة بجفاف شديد؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://www.medlineplus.gov/ency/article/000982.htm",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 83,
+    "question": "Quand les symptômes de la grippe nécessitent-ils un avis médical urgent ?",
+    "answer": "Les personnes présentant un risque plus élevé de complications graves de la grippe, ainsi que toute personne très malade ou inquiète de ses symptômes, devraient contacter un professionnel de santé. Les symptômes seuls ne permettent pas de confirmer une grippe.",
+    "keywords": [
+      "signes d’alerte de la grippe",
+      "influenza",
+      "risque élevé",
+      "maladie grave",
+      "avis médical"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "Quand demander un avis médical urgent pour la grippe ?",
+      "Les symptômes seuls confirment-ils la grippe ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/flu.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 84,
+    "question": "متى تستدعي أعراض الإنفلونزا مشورة طبية عاجلة؟",
+    "answer": "ينبغي للأشخاص الأكثر عرضة لمضاعفات الإنفلونزا الشديدة، وكذلك لكل من يكون مريضًا جدًا أو قلقًا بشأن أعراضه، التواصل مع مختص صحي. ولا تكفي الأعراض وحدها لتأكيد الإصابة بالإنفلونزا.",
+    "keywords": [
+      "علامات الإنذار للإنفلونزا",
+      "الإنفلونزا",
+      "خطر مرتفع",
+      "مرض شديد",
+      "مشورة طبية"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "متى أطلب مشورة طبية عاجلة للإنفلونزا؟",
+      "هل تؤكد الأعراض وحدها الإصابة بالإنفلونزا؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/flu.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 85,
+    "question": "Quand la fièvre doit-elle être considérée comme une urgence ?",
+    "answer": "Demandez une aide d’urgence en cas de fièvre accompagnée de difficultés respiratoires, de lèvres bleues, d’une impossibilité de réveiller la personne, de confusion, d’un très fort mal de tête, d’une raideur de la nuque ou d’une convulsion. Appelez le numéro d’urgence local; les conseils peuvent varier selon l’âge, notamment chez les nourrissons et les enfants.",
+    "keywords": [
+      "urgence liée à la fièvre",
+      "température élevée",
+      "difficulté respiratoire",
+      "lèvres bleues",
+      "confusion",
+      "raideur de la nuque",
+      "convulsion"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "Quels signes associés à la fièvre nécessitent une urgence ?",
+      "Les conseils en cas de fièvre varient-ils selon l’âge ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/ency/article/003090.htm",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 86,
+    "question": "متى تُعد الحمى حالة طارئة؟",
+    "answer": "اطلب المساعدة الطارئة عند وجود حمى مع صعوبة التنفس أو ازرقاق الشفتين أو تعذر إيقاظ الشخص أو الارتباك أو صداع شديد جدًا أو تيبس الرقبة أو تشنج. اتصل برقم الطوارئ المحلي؛ وقد تختلف النصائح بحسب العمر، ولا سيما للرضع والأطفال.",
+    "keywords": [
+      "طوارئ الحمى",
+      "ارتفاع الحرارة",
+      "صعوبة التنفس",
+      "ازرقاق الشفتين",
+      "الارتباك",
+      "تيبس الرقبة",
+      "التشنج"
+    ],
+    "category": "emergency",
+    "severity": "high",
+    "related_questions": [
+      "ما علامات الحمى التي تتطلب الطوارئ؟",
+      "هل تختلف نصائح الحمى بحسب العمر؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/ency/article/003090.htm",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 87,
+    "question": "Les symptômes seuls permettent-ils de savoir si une maladie est la grippe ou une autre infection respiratoire ?",
+    "answer": "Non. Les symptômes de la grippe se chevauchent avec ceux d’autres maladies respiratoires; il peut donc être difficile de les distinguer à partir des seuls symptômes. Un professionnel de santé peut conseiller si une évaluation ou un test est approprié.",
+    "keywords": [
+      "diagnostic de la grippe",
+      "influenza",
+      "infection respiratoire",
+      "chevauchement des symptômes",
+      "test"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "Les symptômes seuls permettent-ils de distinguer la grippe d’autres infections respiratoires ?",
+      "Un test peut-il aider à distinguer les infections respiratoires ?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/flu/about/index.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 88,
+    "question": "هل تكفي الأعراض لمعرفة ما إذا كان المرض إنفلونزا أم عدوى تنفسية أخرى؟",
+    "answer": "لا. تتداخل أعراض الإنفلونزا مع أعراض أمراض تنفسية أخرى، لذلك قد يصعب التمييز بينها اعتمادًا على الأعراض وحدها. ويمكن لمختص صحي تقديم المشورة بشأن الحاجة إلى تقييم أو اختبار.",
+    "keywords": [
+      "تشخيص الإنفلونزا",
+      "الإنفلونزا",
+      "عدوى تنفسية",
+      "تداخل الأعراض",
+      "اختبار"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "هل تكفي الأعراض لتمييز الإنفلونزا عن عدوى تنفسية أخرى؟",
+      "هل يساعد الاختبار في التمييز بين العدوى التنفسية؟"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/flu/about/index.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 89,
+    "question": "Qui présente un risque plus élevé de complications graves de la grippe ?",
+    "answer": "La grippe peut devenir grave, et certains groupes présentent un risque plus élevé, notamment les personnes âgées, les femmes enceintes, les jeunes enfants et les personnes atteintes de certaines maladies chroniques. Les personnes plus à risque devraient contacter un professionnel de santé si elles développent des symptômes grippaux.",
+    "keywords": [
+      "risque lié à la grippe",
+      "complications de l’influenza",
+      "personnes âgées",
+      "grossesse",
+      "jeunes enfants",
+      "maladies chroniques"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "Qui risque davantage des complications graves de la grippe ?",
+      "Que faire si une personne à risque présente des symptômes grippaux ?"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 90,
+    "question": "من الأكثر عرضة لمضاعفات الإنفلونزا الشديدة؟",
+    "answer": "قد تصبح الإنفلونزا شديدة، وتكون بعض الفئات أكثر عرضة للخطر، ومنها كبار السن والحوامل والأطفال الصغار والأشخاص المصابون ببعض الأمراض المزمنة. وينبغي للأشخاص الأكثر عرضة للخطر التواصل مع مختص صحي إذا ظهرت عليهم أعراض الإنفلونزا.",
+    "keywords": [
+      "خطر الإنفلونزا",
+      "مضاعفات الإنفلونزا",
+      "كبار السن",
+      "الحمل",
+      "الأطفال الصغار",
+      "الأمراض المزمنة"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "من الأكثر عرضة لمضاعفات الإنفلونزا الشديدة؟",
+      "ماذا يفعل الأشخاص الأكثر عرضة للخطر عند ظهور أعراض الإنفلونزا؟"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 91,
+    "question": "Combien de temps durent généralement les symptômes de la grippe ?",
+    "answer": "De nombreuses personnes se remettent de la fièvre et des autres symptômes de la grippe en environ une semaine, même si la toux peut durer deux semaines ou plus. Le rétablissement varie; des symptômes graves ou qui s’aggravent nécessitent un avis médical.",
+    "keywords": [
+      "durée de la grippe",
+      "influenza",
+      "rétablissement",
+      "fièvre",
+      "toux",
+      "durée des symptômes"
+    ],
+    "category": "duration",
+    "severity": "medium",
+    "related_questions": [
+      "Combien de temps dure la grippe ?",
+      "Quand demander un avis médical pendant la grippe ?"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 92,
+    "question": "كم تستمر أعراض الإنفلونزا عادةً؟",
+    "answer": "يتعافى كثير من الأشخاص من الحمى وأعراض الإنفلونزا الأخرى خلال نحو أسبوع، مع أن السعال قد يستمر أسبوعين أو أكثر. وتختلف مدة التعافي؛ وتستدعي الأعراض الشديدة أو المتفاقمة مشورة طبية.",
+    "keywords": [
+      "مدة الإنفلونزا",
+      "التعافي",
+      "الحمى",
+      "السعال",
+      "مدة الأعراض"
+    ],
+    "category": "duration",
+    "severity": "medium",
+    "related_questions": [
+      "كم تستمر الإنفلونزا؟",
+      "متى أطلب مشورة طبية أثناء الإنفلونزا؟"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 93,
+    "question": "Comment réduire la propagation des virus respiratoires quand on est malade ?",
+    "answer": "Dans la mesure du possible, restez chez vous et à l’écart des autres lorsque vous êtes malade, couvrez-vous lorsque vous toussez, gardez les mains propres et envisagez d’améliorer la qualité de l’air ou de porter un masque bien ajusté en présence d’autres personnes. Demandez immédiatement des soins d’urgence en cas de difficultés respiratoires ou de douleur thoracique.",
+    "keywords": [
+      "virus respiratoire",
+      "prévenir la transmission",
+      "rester chez soi",
+      "masque",
+      "hygiène des mains",
+      "air intérieur"
+    ],
+    "category": "prevention",
+    "severity": "medium",
+    "related_questions": [
+      "Comment limiter la transmission des virus respiratoires quand on est malade ?",
+      "Quels symptômes nécessitent des soins d’urgence ?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/respiratory-viruses/prevention/precautions-when-sick.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 94,
+    "question": "كيف أقلل انتشار الفيروسات التنفسية عندما أكون مريضًا؟",
+    "answer": "ابقَ في المنزل وبعيدًا عن الآخرين أثناء المرض متى أمكن، وغطِّ فمك عند السعال، وحافظ على نظافة يديك، وفكّر في تحسين جودة الهواء أو ارتداء كمامة محكمة عند مخالطة الآخرين. اطلب رعاية طارئة فورًا عند صعوبة التنفس أو ألم الصدر.",
+    "keywords": [
+      "فيروس تنفسي",
+      "منع الانتقال",
+      "البقاء في المنزل",
+      "كمامة",
+      "نظافة اليدين",
+      "هواء أنقى"
+    ],
+    "category": "prevention",
+    "severity": "medium",
+    "related_questions": [
+      "كيف أحد من انتشار الفيروسات التنفسية عندما أكون مريضًا؟",
+      "ما الأعراض التي تستدعي رعاية طارئة؟"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/respiratory-viruses/prevention/precautions-when-sick.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 95,
+    "question": "Peut-on attraper un rhume par des mains ou des objets contaminés ?",
+    "answer": "Oui. Les virus du rhume peuvent se transmettre par contact rapproché ou par des particules respiratoires. Une personne peut aussi être infectée après avoir touché un objet contaminé puis ses yeux, son nez ou sa bouche.",
+    "keywords": [
+      "rhume",
+      "transmission du rhume",
+      "surfaces contaminées",
+      "mains",
+      "yeux",
+      "nez",
+      "bouche"
+    ],
+    "category": "transmission",
+    "severity": "low",
+    "related_questions": [
+      "Le rhume peut-il se transmettre par des objets contaminés ?",
+      "Comment les virus du rhume se propagent-ils ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/commoncold.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 96,
+    "question": "هل يمكن الإصابة بالزكام من الأيدي أو الأشياء الملوثة؟",
+    "answer": "نعم. قد تنتقل فيروسات الزكام عبر المخالطة القريبة أو الجسيمات التنفسية، وقد يُصاب الشخص أيضًا بعد لمس شيء ملوث ثم لمس عينيه أو أنفه أو فمه.",
+    "keywords": [
+      "الزكام",
+      "انتقال الزكام",
+      "أسطح ملوثة",
+      "الأيدي",
+      "العينان",
+      "الأنف",
+      "الفم"
+    ],
+    "category": "transmission",
+    "severity": "low",
+    "related_questions": [
+      "هل ينتقل الزكام عبر الأشياء الملوثة؟",
+      "كيف تنتشر فيروسات الزكام؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/commoncold.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 97,
+    "question": "Comment prévenir la déshydratation ?",
+    "answer": "Pour réduire le risque de déshydratation, buvez régulièrement au cours de la journée. Buvez davantage lorsque vous perdez plus d’eau, par exemple par temps chaud, pendant l’exercice, en cas de vomissements ou de diarrhée. Des urines pâles peuvent indiquer que vous buvez suffisamment. Les bébés, les jeunes enfants et les personnes âgées peuvent nécessiter une attention particulière concernant l’hydratation. Si des vomissements ou une diarrhée entraînent une perte importante de liquide, demandez à un pharmacien ou à un professionnel de santé si une solution de réhydratation orale est appropriée.",
+    "keywords": [
+      "déshydratation",
+      "prévention",
+      "prévenir la déshydratation",
+      "boire des liquides",
+      "hydratation",
+      "solution de réhydratation orale"
+    ],
+    "category": "prevention",
+    "severity": "medium",
+    "related_questions": [
+      "Comment réduire le risque de déshydratation ?",
+      "Quand demander conseil au sujet d’une solution de réhydratation orale ?"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/dehydration/",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 98,
+    "question": "كيف أقي نفسي من الجفاف؟",
+    "answer": "للحد من خطر الجفاف، اشرب السوائل بانتظام طوال اليوم. واشرب كمية أكبر عند فقدان مزيد من الماء، مثل الطقس الحار أو ممارسة الرياضة أو القيء أو الإسهال. وقد يكون البول الفاتح علامة مفيدة على كفاية الشرب. وقد يحتاج الرضع والأطفال الصغار وكبار السن إلى اهتمام إضافي بالترطيب. إذا تسبب القيء أو الإسهال في فقدان كبير للسوائل، فاسأل صيدليًا أو مختصًا صحيًا عما إذا كان محلول الإماهة الفموي مناسبًا.",
+    "keywords": [
+      "الجفاف",
+      "الوقاية",
+      "منع الجفاف",
+      "شرب السوائل",
+      "الترطيب",
+      "محلول الإماهة الفموي"
+    ],
+    "category": "prevention",
+    "severity": "medium",
+    "related_questions": [
+      "كيف أقلل خطر الجفاف؟",
+      "متى أطلب المشورة بشأن محلول الإماهة الفموي؟"
+    ],
+    "source_name": "NHS",
+    "source_url": "https://www.nhs.uk/conditions/dehydration/",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 99,
+    "question": "Qu’est-ce qu’une crise cardiaque ?",
+    "answer": "Une crise cardiaque survient lorsque la circulation sanguine vers une partie du muscle cardiaque est fortement réduite ou bloquée. C’est une urgence médicale. Les symptômes peuvent comprendre une gêne thoracique, un essoufflement, des sueurs, des nausées ou une gêne au bras, au dos, au cou, à la mâchoire ou à l’estomac. Les symptômes varient et ne sont pas identiques chez tout le monde. Si une crise cardiaque est suspectée, demandez immédiatement une aide médicale d’urgence.",
+    "keywords": [
+      "crise cardiaque",
+      "infarctus du myocarde",
+      "cœur",
+      "circulation sanguine bloquée",
+      "gêne thoracique",
+      "urgence"
+    ],
+    "category": "disease",
+    "severity": "high",
+    "related_questions": [
+      "Qu’est-ce qu’un infarctus ?",
+      "Quels sont les symptômes possibles d’une crise cardiaque ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/heartattack.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 100,
+    "question": "ما النوبة القلبية؟",
+    "answer": "تحدث النوبة القلبية عندما ينخفض تدفق الدم إلى جزء من عضلة القلب بشدة أو يُسد. وهي حالة طبية طارئة. قد تشمل الأعراض انزعاجًا في الصدر أو ضيق النفس أو التعرق أو الغثيان أو انزعاجًا في الذراع أو الظهر أو الرقبة أو الفك أو المعدة. وتختلف الأعراض ولا تظهر بالطريقة نفسها لدى الجميع. إذا اشتُبه في حدوث نوبة قلبية، فاطلب المساعدة الطبية الطارئة فورًا.",
+    "keywords": [
+      "النوبة القلبية",
+      "احتشاء عضلة القلب",
+      "القلب",
+      "انسداد تدفق الدم",
+      "انزعاج الصدر",
+      "الطوارئ"
+    ],
+    "category": "disease",
+    "severity": "high",
+    "related_questions": [
+      "ما احتشاء عضلة القلب؟",
+      "ما الأعراض المحتملة للنوبة القلبية؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/heartattack.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 101,
+    "question": "Quels sont les symptômes courants du diabète ?",
+    "answer": "Les symptômes courants du diabète peuvent comprendre une soif accrue, des mictions fréquentes, une faim accrue, une perte de poids involontaire, de la fatigue et une vision floue. Certaines personnes, notamment celles atteintes de diabète de type 2, peuvent présenter peu ou pas de symptômes visibles. Les symptômes seuls ne permettent pas de confirmer un diabète; un professionnel de santé peut organiser les examens appropriés.",
+    "keywords": [
+      "diabète",
+      "symptômes du diabète",
+      "soif accrue",
+      "mictions fréquentes",
+      "faim",
+      "perte de poids involontaire",
+      "fatigue",
+      "vision floue",
+      "glycémie"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "Quels sont les symptômes courants du diabète ?",
+      "La soif et les mictions fréquentes peuvent-elles être des symptômes du diabète ?",
+      "Comment le diabète est-il diagnostiqué ?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/diabetes/signs-symptoms/index.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 102,
+    "question": "ما الأعراض الشائعة لمرض السكري؟",
+    "answer": "قد تشمل الأعراض الشائعة للسكري زيادة العطش وكثرة التبول وزيادة الجوع ونقصان الوزن دون قصد والتعب وتشوش الرؤية. وقد لا تظهر أعراض واضحة أو تظهر أعراض قليلة لدى بعض الأشخاص، ولا سيما المصابين بالسكري من النوع الثاني. لا تكفي الأعراض وحدها لتأكيد السكري؛ ويمكن لمختص صحي ترتيب الفحوص المناسبة.",
+    "keywords": [
+      "السكري",
+      "أعراض السكري",
+      "زيادة العطش",
+      "كثرة التبول",
+      "الجوع",
+      "نقصان الوزن دون قصد",
+      "التعب",
+      "تشوش الرؤية",
+      "سكر الدم"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "ما الأعراض الشائعة للسكري؟",
+      "هل يمكن أن يكون العطش وكثرة التبول من أعراض السكري؟",
+      "كيف يُشخّص السكري؟"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/diabetes/signs-symptoms/index.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 103,
+    "question": "Qu’est-ce que l’hypertension artérielle ?",
+    "answer": "L’hypertension artérielle signifie que la pression du sang contre les parois des artères est constamment trop élevée. Elle ne provoque souvent aucun symptôme visible; il est donc important de mesurer la pression artérielle. Un professionnel de santé peut interpréter les mesures et conseiller les étapes appropriées.",
+    "keywords": [
+      "hypertension artérielle",
+      "hypertension",
+      "pression artérielle",
+      "mesure de la pression",
+      "santé cardiovasculaire"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "Qu’est-ce que l’hypertension ?",
+      "L’hypertension provoque-t-elle toujours des symptômes ?",
+      "Comment interpréter une mesure de tension ?"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/fact-sheets/detail/hypertension",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 104,
+    "question": "ما ارتفاع ضغط الدم؟",
+    "answer": "يعني ارتفاع ضغط الدم أن ضغط الدم على جدران الشرايين مرتفع باستمرار. وغالبًا لا يسبب أعراضًا واضحة، لذلك من المهم قياس ضغط الدم. ويمكن لمختص صحي تفسير القياسات وتقديم المشورة بشأن الخطوات المناسبة.",
+    "keywords": [
+      "ارتفاع ضغط الدم",
+      "فرط ضغط الدم",
+      "ضغط الدم",
+      "قياس ضغط الدم",
+      "صحة القلب والأوعية"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "ما المقصود بارتفاع ضغط الدم؟",
+      "هل يسبب ارتفاع الضغط أعراضًا دائمًا؟",
+      "كيف تُفسر قراءة ضغط الدم؟"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/fact-sheets/detail/hypertension",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 105,
+    "question": "Qu’est-ce que la glycémie ?",
+    "answer": "La glycémie est la quantité de glucose, un type de sucre, présente dans le sang. Le corps utilise le glucose comme source d’énergie. La glycémie peut être mesurée par des examens appropriés, et l’interprétation dépend du type et du moment de l’examen. Un professionnel de santé peut expliquer ce que signifie un résultat individuel.",
+    "keywords": [
+      "glycémie",
+      "glucose sanguin",
+      "sucre sanguin",
+      "test de glycémie",
+      "diabète",
+      "taux de glucose"
+    ],
+    "category": "medical_information",
+    "severity": "low",
+    "related_questions": [
+      "Qu’est-ce que le glucose sanguin ?",
+      "Comment mesurer la glycémie ?",
+      "Que signifient les résultats d’un test de glycémie ?"
+    ],
+    "source_name": "NIDDK",
+    "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 106,
+    "question": "ما سكر الدم؟",
+    "answer": "سكر الدم هو كمية الغلوكوز، وهو نوع من السكر، الموجودة في الدم. ويستخدم الجسم الغلوكوز للحصول على الطاقة. ويمكن قياس مستوى سكر الدم بفحوص مناسبة، ويعتمد تفسير النتيجة على نوع الفحص وتوقيته. ويمكن لمختص صحي شرح معنى نتيجة شخص بعينه.",
+    "keywords": [
+      "سكر الدم",
+      "الغلوكوز في الدم",
+      "اختبار سكر الدم",
+      "السكري",
+      "مستوى الغلوكوز"
+    ],
+    "category": "medical_information",
+    "severity": "low",
+    "related_questions": [
+      "ما الغلوكوز في الدم؟",
+      "كيف يُقاس سكر الدم؟",
+      "ماذا تعني نتائج اختبار سكر الدم؟"
+    ],
+    "source_name": "NIDDK",
+    "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 107,
+    "question": "Quels sont les signes d’une hyperglycémie ?",
+    "answer": "Une glycémie élevée, aussi appelée hyperglycémie, peut provoquer une soif accrue, des mictions fréquentes, de la fatigue ou une faiblesse, des maux de tête et une vision floue. Certaines personnes peuvent aussi présenter de la confusion ou une somnolence inhabituelle. Les symptômes seuls ne permettent pas de confirmer une hyperglycémie; une mesure de la glycémie et une évaluation médicale appropriée peuvent être nécessaires. En présence de symptômes sévères, notamment de confusion ou d’une somnolence inhabituelle, demandez rapidement un avis médical.",
+    "keywords": [
+      "hyperglycémie",
+      "glycémie élevée",
+      "soif accrue",
+      "mictions fréquentes",
+      "fatigue",
+      "faiblesse",
+      "maux de tête",
+      "vision floue",
+      "confusion"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "Quels sont les symptômes d’une glycémie élevée ?",
+      "Comment diagnostique-t-on l’hyperglycémie ?",
+      "Qu’est-ce que la glycémie ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/hyperglycemia.html",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 108,
+    "question": "ما علامات ارتفاع سكر الدم؟",
+    "answer": "قد يسبب ارتفاع سكر الدم، المعروف أيضًا بفرط سكر الدم، زيادة العطش وكثرة التبول والتعب أو الضعف والصداع وتشوش الرؤية. وقد يعاني بعض الأشخاص أيضًا من الارتباك أو النعاس غير المعتاد. لا تكفي الأعراض وحدها لتأكيد ارتفاع السكر؛ فقد يلزم قياس سكر الدم وإجراء تقييم طبي مناسب. عند ظهور أعراض شديدة، ولا سيما الارتباك أو النعاس غير المعتاد، اطلب مشورة طبية عاجلة.",
+    "keywords": [
+      "ارتفاع سكر الدم",
+      "فرط سكر الدم",
+      "زيادة العطش",
+      "كثرة التبول",
+      "التعب",
+      "الضعف",
+      "الصداع",
+      "تشوش الرؤية",
+      "الارتباك"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "ما أعراض ارتفاع سكر الدم؟",
+      "كيف يُشخّص فرط سكر الدم؟",
+      "ما سكر الدم؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/hyperglycemia.html",
+    "reviewed_at": null,
+    "language": "ar"
+  },
+  {
+    "id": 109,
+    "question": "Une glycémie élevée signifie-t-elle toujours un diabète ?",
+    "answer": "Non. Une glycémie élevée peut être un signe de prédiabète ou de diabète, mais elle ne signifie pas toujours qu’une personne est diabétique. La glycémie peut aussi augmenter temporairement à cause d’une maladie, du stress, d’un traumatisme ou de certains médicaments. Un professionnel de santé devrait interpréter les résultats et peut recommander des analyses appropriées pour en déterminer la cause. Les symptômes seuls ne permettent pas d’établir un diagnostic.",
+    "keywords": [
+      "glycémie élevée",
+      "hyperglycémie",
+      "diagnostic du diabète",
+      "prédiabète",
+      "hausse temporaire du glucose",
+      "stress",
+      "maladie",
+      "effets secondaires de médicaments"
+    ],
+    "category": "medical_information",
+    "severity": "medium",
+    "related_questions": [
+      "Une hyperglycémie signifie-t-elle toujours un diabète ?",
+      "Une glycémie élevée peut-elle survenir sans diabète ?",
+      "Quelles sont les causes possibles d’une hausse de la glycémie ?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/lab-tests/blood-glucose-test/",
+    "reviewed_at": null,
+    "language": "fr"
+  },
+  {
+    "id": 110,
+    "question": "هل يعني ارتفاع سكر الدم دائمًا الإصابة بالسكري؟",
+    "answer": "لا. قد يكون ارتفاع سكر الدم علامة على مقدمات السكري أو السكري، لكنه لا يعني دائمًا أن الشخص مصاب بالسكري. وقد يرتفع سكر الدم مؤقتًا أيضًا بسبب مرض أو توتر أو إصابة أو بعض الأدوية. ينبغي لمختص صحي تفسير النتائج، وقد يوصي بفحوص مخبرية مناسبة لتحديد السبب. لا تكفي الأعراض وحدها لإثبات التشخيص.",
+    "keywords": [
+      "ارتفاع سكر الدم",
+      "فرط سكر الدم",
+      "تشخيص السكري",
+      "مقدمات السكري",
+      "ارتفاع مؤقت للغلوكوز",
+      "التوتر",
+      "المرض",
+      "آثار الأدوية الجانبية"
+    ],
+    "category": "medical_information",
+    "severity": "medium",
+    "related_questions": [
+      "هل يعني فرط سكر الدم دائمًا الإصابة بالسكري؟",
+      "هل يمكن أن يرتفع سكر الدم دون الإصابة بالسكري؟",
+      "ما أسباب ارتفاع سكر الدم؟"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/lab-tests/blood-glucose-test/",
+    "reviewed_at": null,
+    "language": "ar"
+  }
+]

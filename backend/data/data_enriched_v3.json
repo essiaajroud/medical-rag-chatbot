@@ -1,0 +1,204 @@
+[
+  {"id":0,"question":"What is fever?","answer":"Fever is a temporary increase in body temperature, often due to an infection.","keywords":["temporary increase","body temperature","infection"],"category":"symptom","severity":"medium","related_questions":["What causes fever?","How is fever diagnosed?","What is the normal body temperature?"],"source_name":"MedlinePlus","source_url":"https://medlineplus.gov/fever.html","reviewed_at":null,"language":"en"},
+  {"id":1,"question":"What are the symptoms of flu?","answer":"Common symptoms include fever, cough, sore throat, muscle aches, and fatigue.","keywords":["flu","fever","cough","sore throat","muscle aches","fatigue"],"category":"disease","severity":"medium","related_questions":["What are the common symptoms of a cold?","How is flu diagnosed?","How long does flu last?","Can flu be prevented?"],"source_name":"MedlinePlus","source_url":"https://medlineplus.gov/flu.html","reviewed_at":null,"language":"en"},
+  {"id":2,"question":"What should I do in case of chest pain?","answer":"Chest pain may indicate a serious condition such as a heart attack. Seek emergency medical help immediately.","keywords":["chest pain","heart attack"],"category":"emergency","severity":"high","related_questions":["What are the symptoms of a heart attack?","When should I call an ambulance for chest pain?"],"source_name":"NHS","source_url":"https://www.nhs.uk/symptoms/chest-pain/","reviewed_at":null,"language":"en"},
+  {"id":3,"question":"What are the common symptoms of a cold?","answer":"Common cold symptoms usually include sneezing, a stuffy or runny nose, a sore throat, coughing, and sometimes a headache. Symptoms often begin a few days after infection, and some may last 10 to 14 days.","keywords":["common cold","cold symptoms","sneezing","stuffy nose","runny nose","sore throat","cough","headache"],"category":"disease","severity":"low","related_questions":["How is a cold different from the flu?","How long can cold symptoms last?","When should I contact a healthcare professional about a cold?"],"source_name":"MedlinePlus","source_url":"https://www.medlineplus.gov/commoncold.html","reviewed_at":null,"language":"en"},
+  {"id":4,"question":"What are the symptoms of dehydration?","answer":"Signs of dehydration can include thirst, a dry mouth or lips, dark yellow urine, urinating less often, tiredness, dizziness, and light-headedness. Severe symptoms such as confusion, unusual drowsiness, cold skin, or difficulty breathing can indicate a medical emergency.","keywords":["dehydration","thirst","dry mouth","dark urine","urinating less","dizziness","confusion","emergency"],"category":"symptom","severity":"medium","related_questions":["What can cause dehydration?","Who is at higher risk of dehydration?","What are warning signs of severe dehydration?"],"source_name":"NHS","source_url":"https://www.nhs.uk/conditions/dehydration/","reviewed_at":null,"language":"en"},
+  {"id":5,"question":"How is the flu different from a common cold?","answer":"Flu symptoms usually begin suddenly and often include fever, muscle aches, and fatigue. Cold symptoms tend to develop more gradually and mainly affect the nose and throat. Symptoms can overlap, so this comparison cannot confirm a diagnosis.","keywords":["flu","influenza","common cold","difference","sudden symptoms","muscle aches","fatigue","diagnosis"],"category":"disease","severity":"medium","related_questions":["What are the symptoms of flu?","What are the common symptoms of a cold?","Can flu and a cold have similar symptoms?"],"source_name":"MedlinePlus","source_url":"https://medlineplus.gov/flu.html","reviewed_at":null,"language":"en"},
+  {"id":6,"question":"What can cause a fever?","answer":"Fever is a higher-than-normal body temperature and is commonly a sign that the body is responding to an illness or infection. Many infections can cause it; fever alone does not identify the cause.","keywords":["fever","pyrexia","high temperature","infection","illness"],"category":"symptom","severity":"medium","related_questions":["When is a fever an emergency?","What symptoms can occur with fever?"],"source_name":"MedlinePlus","source_url":"https://www.medlineplus.gov/fever.html","reviewed_at":null,"language":"en"},
+  {"id":7,"question":"What does a cough usually mean?","answer":"A cough is a reflex that helps keep the throat and airways clear. Acute coughs commonly occur with colds or flu and often last up to 2 to 3 weeks; a cough lasting longer should be discussed with a healthcare professional.","keywords":["cough","acute cough","chronic cough","airways","cold","flu"],"category":"symptom","severity":"low","related_questions":["When should a persistent cough be checked?","Can a cold cause a cough?"],"source_name":"MedlinePlus","source_url":"https://medlineplus.gov/cough.html","reviewed_at":null,"language":"en"},
+  {"id":8,"question":"What are common causes of a sore throat?","answer":"A sore throat, also called pharyngitis, can be caused by colds or flu and other conditions such as allergies, mononucleosis, or strep throat. The cause cannot be identified from soreness alone.","keywords":["sore throat","pharyngitis","throat pain","cold","flu","strep throat"],"category":"symptom","severity":"low","related_questions":["Can a sore throat occur with a cold?","When does a sore throat need urgent care?"],"source_name":"MedlinePlus","source_url":"https://medlineplus.gov/sorethroat.html","reviewed_at":null,"language":"en"},
+  {"id":9,"question":"What are common causes of a headache?","answer":"Headaches can have many causes. Tension-type headaches are common, and headaches may also occur with illnesses such as a cold, flu, or fever. A headache pattern alone cannot establish a diagnosis.","keywords":["headache","head pain","tension headache","cold","flu","fever"],"category":"symptom","severity":"medium","related_questions":["What warning signs with a headache need emergency care?","What is a sudden severe headache?"],"source_name":"MedlinePlus","source_url":"https://medlineplus.gov/ency/article/003024.htm","reviewed_at":null,"language":"en"},
+  {"id":10,"question":"What is fatigue and what can cause it?","answer":"Fatigue is weariness, tiredness, or lack of energy. It can follow activity, stress, or too little sleep, but may also have medical causes; contact a healthcare professional if it persists for weeks.","keywords":["fatigue","tiredness","weariness","low energy","exhaustion"],"category":"symptom","severity":"low","related_questions":["Can infections cause fatigue?","When should persistent fatigue be assessed?"],"source_name":"MedlinePlus","source_url":"https://medlineplus.gov/fatigue.html","reviewed_at":null,"language":"en"},
+  {"id":11,"question":"What can lead to dehydration?","answer":"Dehydration happens when the body loses more fluid than it takes in. Fever, vomiting, diarrhea, heavy sweating, or not drinking enough can contribute to fluid loss.","keywords":["dehydration","fluid loss","vomiting","diarrhea","fever","sweating"],"category":"symptom","severity":"medium","related_questions":["What are signs of dehydration?","Who is more at risk of dehydration?"],"source_name":"NHS","source_url":"https://www.nhs.uk/conditions/dehydration/","reviewed_at":null,"language":"en"},
+  {"id":12,"question":"How does influenza spread?","answer":"Influenza spreads mainly through particles released when an infected person coughs, sneezes, or talks. Less often, infection can follow touching a contaminated surface and then the mouth, nose, or eyes.","keywords":["influenza","flu","transmission","spread","cough","sneeze","droplets"],"category":"transmission","severity":"medium","related_questions":["How can respiratory infections be prevented?","How does flu differ from a cold?"],"source_name":"CDC","source_url":"https://www.cdc.gov/flu/about/index.html","reviewed_at":null,"language":"en"},
+  {"id":13,"question":"How long does a common cold usually last?","answer":"Cold symptoms often begin a few days after infection, and some symptoms may last 10 to 14 days. If symptoms worsen or do not improve, seek advice from a healthcare professional.","keywords":["common cold","cold duration","how long","symptoms","10 to 14 days"],"category":"duration","severity":"low","related_questions":["What are common cold symptoms?","When should I contact a healthcare professional about a cold?"],"source_name":"MedlinePlus","source_url":"https://medlineplus.gov/commoncold.html","reviewed_at":null,"language":"en"},
+  {"id":14,"question":"How can respiratory infections spread between people?","answer":"Respiratory germs can spread when people cough, sneeze, or talk, and through hands or objects contaminated with germs that are then touched to the face. The exact routes vary by germ.","keywords":["respiratory infection","transmission","spread","cough","sneeze","contaminated surfaces","hands"],"category":"transmission","severity":"medium","related_questions":["How does flu spread?","How can handwashing reduce infection spread?"],"source_name":"CDC","source_url":"https://www.cdc.gov/hygiene/about/coughing-and-sneezing.html","reviewed_at":null,"language":"en"},
+  {"id":15,"question":"How should I wash my hands to help prevent infection?","answer":"Wash hands with soap and water, rubbing all surfaces. If soap and water are unavailable, CDC says a hand sanitizer containing at least 60% alcohol can help in community settings.","keywords":["handwashing","hand washing","soap","water","hand sanitizer","hygiene"],"category":"prevention","severity":"low","related_questions":["How do respiratory infections spread?","What habits help prevent flu?"],"source_name":"CDC","source_url":"https://www.cdc.gov/clean-hands/faq/index.html","reviewed_at":null,"language":"en"},
+  {"id":16,"question":"What habits can help prevent respiratory infections?","answer":"Cover coughs and sneezes, clean hands, avoid close contact with people who are sick, and improve indoor air when possible. These steps can reduce spread but cannot eliminate all risk.","keywords":["respiratory infection prevention","hygiene","cover cough","handwashing","cleaner air","distancing"],"category":"prevention","severity":"low","related_questions":["How should I wash my hands?","How can flu be prevented?"],"source_name":"CDC","source_url":"https://www.cdc.gov/respiratory-viruses/prevention/precautions-when-sick.html","reviewed_at":null,"language":"en"},
+  {"id":17,"question":"How can I reduce my risk of getting the flu?","answer":"Seasonal flu vaccination is the best way to reduce the risk of flu and serious illness. Handwashing, covering coughs and sneezes, cleaner air, and avoiding close contact with sick people can also help reduce spread.","keywords":["flu prevention","influenza vaccine","vaccination","handwashing","cleaner air"],"category":"prevention","severity":"low","related_questions":["How does influenza spread?","What habits help prevent respiratory infections?"],"source_name":"WHO","source_url":"https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu","reviewed_at":null,"language":"en"},
+  {"id":18,"question":"Do antibiotics treat the common cold?","answer":"No. Antibiotics treat certain bacterial infections, not viruses that cause colds. Unneeded antibiotics can cause side effects; ask a healthcare professional about concerns or worsening symptoms.","keywords":["antibiotics","common cold","viral infection","virus","bacterial infection","antimicrobial resistance"],"category":"treatment_information","severity":"low","related_questions":["Is the common cold caused by a virus?","When should I seek care for cold symptoms?"],"source_name":"CDC","source_url":"https://www.cdc.gov/antibiotic-use/about/","reviewed_at":null,"language":"en"},
+  {"id":19,"question":"When is difficulty breathing an emergency?","answer":"Sudden or severe difficulty breathing, or breathlessness that makes speaking difficult, needs emergency care. Call your local emergency number immediately.","keywords":["difficulty breathing","shortness of breath","breathlessness","dyspnea","emergency"],"category":"emergency","severity":"high","related_questions":["Can respiratory infections cause breathing difficulty?","What warning signs require emergency help?"],"source_name":"MedlinePlus","source_url":"https://www.medlineplus.gov/ency/article/003075.htm","reviewed_at":null,"language":"en"},
+  {"id":20,"question":"What are the warning signs of a stroke?","answer":"Stroke signs can start suddenly and include facial drooping, weakness in an arm, or speech problems (FAST). Sudden vision, balance, or one-sided weakness problems also need immediate emergency help; call your local emergency number.","keywords":["stroke","FAST","face drooping","arm weakness","speech problems","sudden numbness","emergency"],"category":"emergency","severity":"high","related_questions":["What should I do if stroke signs stop?","Can a severe headache be an emergency warning sign?"],"source_name":"NHS","source_url":"https://www.nhs.uk/conditions/stroke/symptoms/","reviewed_at":null,"language":"en"},
+  {"id":21,"question":"What should I do about a sudden, extremely severe headache?","answer":"A sudden, extremely painful headache that does not go away can signal a life-threatening problem. Call your local emergency number immediately, even if you have had other headaches before.","keywords":["sudden headache","severe headache","thunderclap headache","worst headache","emergency"],"category":"emergency","severity":"high","related_questions":["What are warning signs of a stroke?","When does a headache need emergency care?"],"source_name":"NHS","source_url":"https://www.nhs.uk/conditions/subarachnoid-haemorrhage/","reviewed_at":null,"language":"en"},
+  {"id":22,"question":"What are signs of severe dehydration that need emergency help?","answer":"Confusion, fainting, no urination, very rapid breathing or heartbeat, or signs of shock can indicate severe dehydration. Get emergency medical help immediately by calling your local emergency number.","keywords":["severe dehydration","confusion","fainting","no urination","rapid breathing","shock","emergency"],"category":"emergency","severity":"high","related_questions":["What are common dehydration symptoms?","What can cause dehydration?"],"source_name":"MedlinePlus","source_url":"https://www.medlineplus.gov/ency/article/000982.htm","reviewed_at":null,"language":"en"},
+  {"id":23,"question":"When should flu symptoms prompt urgent medical advice?","answer":"People at higher risk of severe flu complications, or anyone who is very sick or worried about flu symptoms, should contact a healthcare professional. Symptoms alone cannot confirm influenza.","keywords":["flu warning signs","influenza","high risk","severe illness","medical advice"],"category":"emergency","severity":"high","related_questions":["What are common flu symptoms?","How can flu differ from a cold?"],"source_name":"MedlinePlus","source_url":"https://medlineplus.gov/flu.html","reviewed_at":null,"language":"en"},
+  {"id":24,"question":"When should a fever be treated as an emergency?","answer":"Seek emergency help for fever with difficulty breathing, blue lips, inability to wake, confusion, a very bad headache, stiff neck, or a seizure. Call your local emergency number; age-specific advice may differ for infants and children.","keywords":["fever emergency","high temperature","difficulty breathing","blue lips","confusion","stiff neck","seizure"],"category":"emergency","severity":"high","related_questions":["What can cause a fever?","What are warning signs of severe dehydration?"],"source_name":"MedlinePlus","source_url":"https://medlineplus.gov/ency/article/003090.htm","reviewed_at":null,"language":"en"},
+  {"id":25,"question":"Can symptoms alone tell whether an illness is flu or another respiratory infection?","answer":"No. Flu symptoms overlap with those of other respiratory illnesses, so symptoms alone can make it difficult to tell them apart. A healthcare professional can advise whether evaluation or testing is appropriate.","keywords":["flu diagnosis","influenza","respiratory infection","symptom overlap","testing"],"category":"disease","severity":"medium","related_questions":["How is flu different from a cold?","What are common flu symptoms?"],"source_name":"CDC","source_url":"https://www.cdc.gov/flu/about/index.html","reviewed_at":null,"language":"en"},
+  {"id":26,"question":"Who is at higher risk of serious flu complications?","answer":"Flu can become severe, and some groups have higher risk, including older adults, pregnant people, young children, and people with certain chronic conditions. Those at higher risk should contact a healthcare professional if they develop flu symptoms.","keywords":["flu risk","influenza complications","older adults","pregnancy","young children","chronic conditions"],"category":"disease","severity":"medium","related_questions":["When should flu symptoms prompt medical advice?","How can flu be prevented?"],"source_name":"WHO","source_url":"https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu","reviewed_at":null,"language":"en"},
+  {"id":27,"question":"How long do flu symptoms usually last?","answer":"Many people recover from fever and other flu symptoms within about a week, although a cough can last two weeks or longer. Recovery varies, and severe or worsening symptoms need medical advice.","keywords":["flu duration","influenza","recovery","fever","cough","symptom duration"],"category":"duration","severity":"medium","related_questions":["What are common flu symptoms?","When should flu symptoms prompt medical advice?"],"source_name":"WHO","source_url":"https://www.who.int/news-room/questions-and-answers/item/how-can-i-avoid-getting-the-flu","reviewed_at":null,"language":"en"},
+  {"id":28,"question":"How can I reduce respiratory virus spread when I am sick?","answer":"Stay home and away from others while sick when possible, cover coughs, keep hands clean, and consider cleaner air or a well-fitting mask around others. Seek emergency care immediately for trouble breathing or chest pain.","keywords":["respiratory virus","prevent transmission","stay home","mask","hand hygiene","cleaner air"],"category":"prevention","severity":"medium","related_questions":["How do respiratory infections spread?","What emergency warning signs need immediate care?"],"source_name":"CDC","source_url":"https://www.cdc.gov/respiratory-viruses/prevention/precautions-when-sick.html","reviewed_at":null,"language":"en"},
+  {"id":29,"question":"Can a person catch a cold from contaminated hands or objects?","answer":"Yes. Cold viruses can spread through close contact or respiratory particles, and a person may become infected after touching a contaminated object and then their eyes, nose, or mouth.","keywords":["common cold","cold transmission","contaminated surfaces","hands","eyes","nose","mouth"],"category":"transmission","severity":"low","related_questions":["How do respiratory infections spread?","How should I wash my hands?"],"source_name":"MedlinePlus","source_url":"https://medlineplus.gov/commoncold.html","reviewed_at":null,"language":"en"},
+  {"id": 30,"question": "How can I prevent dehydration?","answer": "To reduce the risk of dehydration, drink fluids regularly throughout the day. Drink more fluids when you are losing more water, such as during hot weather, exercise, vomiting, or diarrhea. Pale-coloured urine can be a useful sign that you are drinking enough. Babies, young children, and older adults may need extra attention to hydration. If vomiting or diarrhea causes significant fluid loss, ask a pharmacist or healthcare professional whether an oral rehydration solution is appropriate.","keywords": ["dehydration","prevention","prevent dehydration","drink fluids","hydration","oral rehydration","vomiting","diarrhea"],"category": "prevention","severity": "medium","related_questions": ["What are the symptoms of dehydration?","What can lead to dehydration?","What are signs of severe dehydration that need emergency help?"],"source_name": "NHS","source_url": "https://www.nhs.uk/conditions/dehydration/","reviewed_at": null,"language": "en"},
+  {
+  "id": 31,
+  "question": "What is a heart attack?",
+  "answer": "A heart attack occurs when blood flow to part of the heart muscle is severely reduced or blocked. It is a medical emergency. Symptoms can include chest discomfort, shortness of breath, sweating, nausea, or discomfort in the arm, back, neck, jaw, or stomach. Symptoms vary, and not everyone experiences the same signs. If a heart attack is suspected, seek emergency medical help immediately.",
+  "keywords": [
+    "heart attack",
+    "myocardial infarction",
+    "heart",
+    "blocked blood flow",
+    "chest discomfort",
+    "emergency"
+  ],
+  "category": "disease",
+  "severity": "high",
+  "related_questions": [
+    "What are the symptoms of a heart attack?",
+    "What should I do in case of chest pain?"
+  ],
+  "source_name": "MedlinePlus",
+  "source_url": "https://medlineplus.gov/heartattack.html",
+  "reviewed_at": null,
+  "language": "en"
+}
+  ,
+  {
+    "id": 32,
+    "question": "What are the common symptoms of diabetes?",
+    "answer": "Common symptoms of diabetes can include increased thirst, frequent urination, increased hunger, unintended weight loss, fatigue, and blurred vision. Some people, especially those with type 2 diabetes, may have few or no noticeable symptoms. Symptoms alone cannot confirm diabetes; a healthcare professional can arrange appropriate testing.",
+    "keywords": [
+      "diabetes",
+      "diabetes symptoms",
+      "increased thirst",
+      "frequent urination",
+      "hunger",
+      "unintended weight loss",
+      "fatigue",
+      "blurred vision",
+      "blood glucose",
+      "high blood sugar",
+      "high blood glucose",
+      "elevated blood glucose",
+      "frequent urination",
+      "urinating frequently",
+      "peeing often",
+      "feeling thirsty",
+      "increased thirst",
+      "diabetes warning signs"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "What is diabetes?",
+      "How is diabetes diagnosed?",
+      "What are the risk factors for type 2 diabetes?",
+      "What are the signs of high blood sugar?",
+      "Can frequent urination and increased thirst be symptoms of diabetes?",
+      "What are the warning signs of diabetes?"
+    ],
+    "source_name": "CDC",
+    "source_url": "https://www.cdc.gov/diabetes/signs-symptoms/index.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 33,
+    "question": "What is high blood pressure?",
+    "answer": "High blood pressure, also called hypertension, means that the pressure of blood against artery walls is consistently too high. It often has no noticeable symptoms, so measuring blood pressure is important. A healthcare professional can interpret measurements and advise on appropriate next steps.",
+    "keywords": [
+      "high blood pressure",
+      "hypertension",
+      "blood pressure",
+      "blood pressure measurement",
+      "cardiovascular health"
+    ],
+    "category": "disease",
+    "severity": "medium",
+    "related_questions": [
+      "What are the risk factors for high blood pressure?",
+      "How is high blood pressure diagnosed?",
+      "How can blood pressure be managed?"
+    ],
+    "source_name": "WHO",
+    "source_url": "https://www.who.int/news-room/fact-sheets/detail/hypertension",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  {
+    "id": 34,
+    "question": "What is blood glucose?",
+    "answer": "Blood glucose is the amount of glucose, a type of sugar, in the blood. The body uses glucose for energy. Blood glucose levels can be measured using appropriate tests, and the interpretation depends on the type and timing of the test. A healthcare professional can explain what an individual result means.",
+    "keywords": [
+      "blood glucose",
+      "blood sugar",
+      "glucose",
+      "blood glucose test",
+      "diabetes",
+      "glucose levels"
+    ],
+    "category": "medical_information",
+    "severity": "low",
+    "related_questions": [
+      "What are the common symptoms of diabetes?",
+      "How is diabetes diagnosed?",
+      "What do blood glucose test results mean?"
+    ],
+    "source_name": "NIDDK",
+    "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+    "reviewed_at": null,
+    "language": "en"
+  }
+  ,
+  {
+    "id": 35,
+    "question": "What are the signs of high blood sugar?",
+    "answer": "High blood sugar, also called hyperglycemia, can cause increased thirst, frequent urination, tiredness or weakness, headaches, and blurred vision. Some people may also experience confusion or unusual sleepiness. Symptoms alone cannot confirm high blood sugar; a blood glucose measurement and appropriate medical assessment may be needed. If severe symptoms occur, especially confusion or unusual drowsiness, seek urgent medical advice.",
+    "keywords": [
+      "high blood sugar",
+      "high blood glucose",
+      "hyperglycemia",
+      "elevated blood sugar",
+      "increased thirst",
+      "frequent urination",
+      "tiredness",
+      "weakness",
+      "headache",
+      "blurred vision",
+      "confusion"
+    ],
+    "category": "symptom",
+    "severity": "medium",
+    "related_questions": [
+      "What are the common symptoms of diabetes?",
+      "What is blood glucose?",
+      "How is high blood sugar diagnosed?",
+      "What is hyperglycemia?"
+    ],
+    "source_name": "MedlinePlus",
+    "source_url": "https://medlineplus.gov/hyperglycemia.html",
+    "reviewed_at": null,
+    "language": "en"
+  },
+  
+{
+  "id": 36,
+  "question": "Does high blood sugar always mean diabetes?",
+  "answer": "No. High blood glucose can be a sign of prediabetes or diabetes, but it does not always mean that a person has diabetes. Blood glucose can also rise temporarily because of illness, stress, trauma, or certain medicines. A healthcare professional should interpret the results and may recommend appropriate laboratory tests to determine the cause. Symptoms alone cannot establish a diagnosis.",
+  "keywords": [
+    "high blood sugar",
+    "high blood glucose",
+    "hyperglycemia",
+    "diabetes diagnosis",
+    "prediabetes",
+    "temporary high glucose",
+    "stress",
+    "illness",
+    "medication side effects"
+  ],
+  "category": "medical_information",
+  "severity": "medium",
+  "related_questions": [
+    "Can high blood sugar occur without diabetes?",
+    "What can cause high blood glucose?",
+    "Does hyperglycemia always mean diabetes?",
+    "How is diabetes diagnosed?"
+  ],
+  "source_name": "MedlinePlus",
+  "source_url": "https://medlineplus.gov/lab-tests/blood-glucose-test/",
+  "reviewed_at": null,
+  "language": "en"
+}
+
+] 
