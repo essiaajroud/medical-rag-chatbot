@@ -24,10 +24,45 @@ class AgentState(TypedDict):
 
 
 
+
 def _normalize(text: str) -> str:
     text = unicodedata.normalize("NFKD", text.casefold())
-    text = "".join(char for char in text if not unicodedata.combining(char))
-    return re.sub(r"[^\w']+", " ", text, flags=re.UNICODE).strip()
+    text = "".join(
+        char for char in text
+        if not unicodedata.combining(char)
+    )
+
+    # Uniformiser les apostrophes typographiques.
+    text = text.replace("’", "'").replace("‘", "'").replace("`", "'")
+
+    return re.sub(
+        r"[^\w']+",
+        " ",
+        text,
+        flags=re.UNICODE,
+    ).strip()
+
+
+
+def _is_negated_symptom(normalized: str, symptom_pattern: str) -> bool:
+    """
+    Détecte une négation simple placée juste avant un symptôme.
+    Ne remplace pas une analyse complète du contexte.
+    """
+    negation_patterns = (
+        rf"\b(?:i do not have|i don't have|i have no|"
+        rf"there is no|there are no|no|without)\s+"
+        rf"(?:\w+\s+){{0,3}}(?:{symptom_pattern})\b",
+
+        rf"\b(?:i am not experiencing|i am not having|"
+        rf"i'm not having|i'm not experiencing)\s+"
+        rf"(?:\w+\s+){{0,3}}(?:{symptom_pattern})\b",
+    )
+
+    return any(
+        re.search(pattern, normalized)
+        for pattern in negation_patterns
+    )
 
 
 _EMERGENCY_PATTERNS = {
@@ -37,57 +72,145 @@ _EMERGENCY_PATTERNS = {
     ),
     "cardiac": (
         r"\b(chest pain|chest discomfort|chest pressure|tightness in (my |the )?chest|suspected heart attack|having a heart attack)\b",
-        r"\b(douleur (thoracique|dans la poitrine)|oppression thoracique|serrement (dans la poitrine|thoracique)|suspicion d'infarctus|je fais un infarctus)\b",
+        r"\b(douleur (thoracique|dans la poitrine)|oppression thoracique|oppression dans la poitrine|forte oppression dans la poitrine|serrement (dans la poitrine|thoracique)|suspicion d'infarctus|je fais un infarctus)\b",
+        r"\b(crushing pressure in (my|the) chest|crushing chest pressure|severe pressure in (my|the) chest)\b",
     ),
-    
+        
     "breathing": (
         r"\b(can't breathe|cannot breathe|unable to breathe|struggling to breathe|severe shortness of breath|severe difficulty breathing|difficulty breathing|shortness of breath)\b",
         r"\b(ne peux pas respirer|n'arrive pas a respirer|difficulte respiratoire severe|difficulte a respirer|respiration tres difficile|essoufflement severe|grandes difficultes a respirer|difficultes severes a respirer)\b",
+        r"\b(j'ai beaucoup de mal a respirer|beaucoup de mal a respirer|grande difficulte a respirer|difficulte severe a respirer)\b",
+        r"\b(je n arrive plus a respirer|je n'arrive plus a respirer|je ne peux plus respirer|je ne parviens plus a respirer)\b",
+        r"\b(can barely breathe|can hardly breathe|barely able to breathe)\b",
+        r"\b(gasping for air|gasping for breath|struggling for air)\b",
     ),
 
     "breathing_ar": (
         r"(?!)",
-        r"(صعوبة\s+(شديدة\s+|حادة\s+|بالغة\s+)?في التنفس|ضيق\s+(شديد\s+|حاد\s+)?التنفس|لا\s+أستطيع\s+التنفس|لا\s+استطيع\s+التنفس|أعاني\s+من\s+صعوبة\s+في\s+التنفس|اعاني\s+من\s+صعوبة\s+في\s+التنفس)",
+        r"(صعوبة\s+(شديدة\s+|حادة\s+|بالغة\s+)?في التنفس|ضيق\s+(شديد\s+|حاد\s+)?(في\s+)?التنفس|عندي\s+ضيق\s+شديد\s+في\s+التنفس|لا\s+أستطيع\s+التنفس|لا\s+استطيع\s+التنفس|أعاني\s+من\s+صعوبة\s+في\s+التنفس|اعاني\s+من\s+صعوبة\s+في\s+التنفس)",
     ),
 
     "stroke": (
         r"\b(face is drooping|facial drooping|face drooping|sudden (slurred speech|speech (problem|difficulty)|weakness on one side)|suspected (a )?stroke|possible (a )?stroke)\b",
         r"\b(visage (qui s'affaisse|s'affaisse)|bouche (deformee|qui tombe)|difficulte soudaine a parler|du mal a parler|trouble soudain de la parole|faiblesse soudaine d'un (bras|cote)|suspicion d'avc|avc suspect)\b",
+        r"sudden(ly)?\s+(cannot|can't|unable to)\s+speak",
+        r"(sudden|suddenly)\s+(difficulty|trouble)\s+speaking",
+        r"cannot\s+speak\s+clearly",
+        r"slurred\s+speech",
+        r"sudden\s+facial\s+drooping",
+        r"\b(sudden(ly)?\s+(cannot|can't|can not|unable to)\s+speak( clearly)?|sudden(ly)?\s+(difficulty|trouble)\s+(speaking|talking)|cannot\s+speak\s+clearly|slurred\s+speech|sudden\s+facial\s+drooping)\b",
+        r"\b(sudden(ly)?\s+)?(have\s+)?(develop(ed)?\s+)?(weakness|numbness)\s+on\s+(one|the left|the right)\s+side(\s+of\s+(my|the|their|his|her)\s+body)?\b",
+        r"\b(one-sided|one sided)\s+(weakness|numbness)\b",
+        r"\b(soudainement.{0,30}faiblesse.{0,40}(un cote|d'un cote|du cote)|faiblesse soudaine.{0,30}(un cote|d'un cote|du cote))\b",
+        r"\b(trouble soudain de la parole|trouble de la parole soudain|difficulte soudaine a parler|difficulte soudaine pour parler)\b",
+        r"\b(personne presente|presente|a|developpe|developpe soudainement).{0,50}(trouble de la parole|difficulte a parler)\b",
+        r"\b(?:weakness|weak)\b.{0,60}\b(?:one side|one side of my body)\b",  
+        r"\b(my|his|her|their)\s+face\s+(suddenly\s+)?(looks?|looked|seems?)\s+(uneven|asymmetrical|lopsided)\b",
+        r"\b(i suddenly can't get my words out|i suddenly cannot get my words out|suddenly can't get my words out|suddenly cannot get my words out)\b",
+        r"\b(i\s+)?suddenly\s+(feel|felt|become|became|have|had)\s+(weak|weakness|numb|numbness)\s+on\s+(one|the left|the right)\s+side\b",
+
     ),
     "unconsciousness": (
         r"\b(unconscious|unresponsive|passed out|fainted|not waking up)\b",
         r"\b(perte de connaissance|perdu connaissance|inconscient|inconsciente|ne repond plus|ne se reveille pas|evanoui|evanouie)\b",
+        r"\b(collapsed and won't wake up|collapsed and will not wake up|collapsed and isn't waking up|collapsed and is not waking up)\b",
     ),
     "other": (
         r"\b(uncontrolled bleeding|severe bleeding|severe allergic reaction|swelling of (the )?(tongue|throat)|overdose|poisoning|seizure|convulsion)\b",
         r"\b(saignement abondant|hemorragie|reaction allergique grave|gonflement (de la langue|de la gorge)|surdose|empoisonnement|convulsion)\b",
     ),
-    
+        
     "cardiac_ar": (
         r"(?!)",
-        r"(ألم|وجع)( شديد| حاد| قوي)? (في )?(الصدر|صدري)"
-        r"|ضيق في الصدر|ضغط في الصدر|ألم صدري",
+        r"(الم|وجع)\s*(شديد|شديده|حاد|حاده|قوي|قويه)?\s*(في\s*)?(الصدر|صدري)",
+        r"ضيق\s*في\s*الصدر",
+        r"ضغط\s*في\s*الصدر",
+        r"الم\s*صدري",
+        r"ضيق\s*(شديد\s*)?في\s*التنفس",
+        r"صعوبة\s*(شديدة\s*)?في\s*التنفس",
+        r"لا\s*استطيع\s*التنفس",
     ),
+
     "stroke_ar": (
-    r"(?!)",
-    r"(هبوط|تدل[يّ]?)\s*(في\s*)?(الوجه|وجهي)"
-    r"|اعوجاج\s*(في\s*)?(الوجه|الفم)"
-    r"|صعوبة\s*(مفاجئة\s*)?(في\s*)?(الكلام|التكلم|النطق)"
-    r"|ثقل\s*(في\s*)?(اللسان|الكلام)"
-    r"|ضعف\s*(مفاجئ\s*)?(في\s*)?(الذراع|اليد|الساق|الرجل)"
-    r"|خدر\s*(مفاجئ\s*)?(في\s*)?(الوجه|الذراع|اليد|الساق)"
-    r"|فقدان\s*(مفاجئ\s*)?(للتوازن|للنظر)"
+        r"(?!)",
+        r"وجهي\s*يتدلى"
+        r"|تدلى\s*(في\s*)?(الوجه|وجهي)"
+        r"|هبوط\s*(في\s*)?(الوجه|الفم)"
+        r"|اعوجاج\s*(مفاجئ\s*)?(في\s*)?(الوجه|الفم)"
+        r"|صعوبة\s*(مفاجئة\s*)?(في\s*)?(الكلام|التكلم|النطق)"
+        r"|ثقل\s*(في\s*)?(اللسان|الكلام)"
+        r"|ضعف\s*مفاجئ\s*(في\s*)?(الذراع|اليد|الساق|الرجل)"
+        r"|خدر\s*مفاجئ\s*(في\s*)?(الوجه|الذراع|اليد|الساق)"
+        r"|فقدان\s*مفاجئ\s*(للتوازن|للنظر)",
+        r"(ضعف|خدر|تنميل).{0,30}(مفاجئ|مفاجي|فجائي|فجاي).{0,40}(أحد|احد|جانبي|جانب).{0,30}(جسم|جسمي|الجسم|جسده)",
+        r"(أحد|احد)\s+جانبي\s+(الجسم|جسمي|جسده).{0,40}(ضعف|خدر|تنميل)",
     ),
 
 }
 
 
+
+
+
 def detect_emergency_type(query: str) -> str | None:
     normalized = _normalize(query)
+
+    aliases = {
+        "cardiac_ar": "cardiac",
+        "stroke_ar": "stroke",
+        "breathing_ar": "breathing",
+    }
+
+    cardiac_patterns = _EMERGENCY_PATTERNS["cardiac"]
+
+    # Séparer les clauses pour ne pas laisser une négation
+    # masquer un symptôme urgent décrit après "but".
+    clauses = re.split(
+        r"\b(?:but|however|although|yet)\b",
+        normalized,
+    )
+
+    cardiac_detected = False
+
+    for clause in clauses:
+        has_cardiac_match = any(
+            re.search(pattern, clause)
+            for pattern in cardiac_patterns
+        )
+
+        if not has_cardiac_match:
+            continue
+
+        cardiac_negation = re.search(
+            r"\b(?:i don't have|i do not have|i have no|"
+            r"i am not experiencing|i'm not experiencing)\s+"
+            r"(?:any\s+)?(?:chest pain|chest discomfort|"
+            r"chest pressure|tightness in (?:my |the )?chest)\b",
+            clause,
+        )
+
+        if not cardiac_negation:
+            cardiac_detected = True
+            break
+
+    # Une douleur thoracique réellement signalée reste prioritaire.
+    if cardiac_detected:
+        return "cardiac"
+
+    # Ensuite, vérifier les autres urgences, même si une douleur
+    # thoracique a été explicitement niée.
     for emergency_type, patterns in _EMERGENCY_PATTERNS.items():
-        if any(re.search(pattern, normalized) for pattern in patterns):
-            return emergency_type
+        if emergency_type == "cardiac":
+            continue
+
+        if any(
+            re.search(pattern, normalized)
+            for pattern in patterns
+        ):
+            return aliases.get(emergency_type, emergency_type)
+
     return None
+
 
 
 def is_emergency_question(query: str) -> bool:
@@ -542,7 +665,10 @@ _EMERGENCY_MESSAGES = {
         "Une difficulté respiratoire sévère est une urgence. Appelez immédiatement le numéro d’urgence local ou demandez à quelqu’un de le faire."
     ),
     "stroke": (
-        "Un visage qui s’affaisse ou une difficulté soudaine à parler peut être un signe d’AVC. Appelez immédiatement le numéro d’urgence local, même si les symptômes s’atténuent."
+        "Une faiblesse soudaine d’un côté du corps, un affaissement du "
+        "visage ou une difficulté soudaine à parler peuvent être des "
+        "signes d’AVC. Appelez immédiatement le numéro d’urgence local, "
+        "même si les symptômes s’atténuent ou disparaissent."
     ),
     "unconsciousness": (
         "Une perte de connaissance ou une personne qui ne répond pas nécessite une aide immédiate. Appelez maintenant le numéro d’urgence local."
@@ -575,6 +701,10 @@ async def llm_node(state):
 async def emergency_node(state):
     language = detect_language(state["question"])
     emergency_type = state.get("emergency_type")
+    answer = _EMERGENCY_MESSAGES.get(
+        emergency_type,
+        _EMERGENCY_MESSAGES["other"],
+    )
     if language == "en":
         answer = "These symptoms may be a medical emergency. Call your local emergency number now."
         if emergency_type == "cardiac":
@@ -582,7 +712,12 @@ async def emergency_node(state):
         elif emergency_type == "breathing":
             answer = "Severe difficulty breathing is an emergency. Call your local emergency number now."
         elif emergency_type == "stroke":
-            answer = "A drooping face or sudden speech difficulty can be signs of a stroke. Call your local emergency number now."
+            answer = (
+                "Sudden weakness on one side of the body, facial drooping, "
+                "or difficulty speaking can be signs of a stroke. "
+                "Call your local emergency number immediately, even if "
+                "the symptoms improve or disappear. Do not wait."
+            )
     
     elif language == "ar":
         if emergency_type == "cardiac":
@@ -598,9 +733,10 @@ async def emergency_node(state):
             )
         elif emergency_type == "stroke":
             answer = (
-                "قد يكون تدلّي الوجه أو صعوبة الكلام المفاجئة "
-                "علامة على سكتة دماغية. اتصل فورًا برقم الطوارئ "
-                "لا تنتظر تحسن الأعراض، حتى لو اختفت."
+                "قد يكون الضعف المفاجئ في أحد جانبي الجسم، أو تدلّي الوجه، "
+                "أو صعوبة الكلام المفاجئة من علامات السكتة الدماغية. "
+                "اتصل فورًا برقم الطوارئ المحلي، حتى إذا تحسنت الأعراض "
+                "أو اختفت. لا تنتظر."
             )
         elif emergency_type == "unconsciousness":
             answer = (

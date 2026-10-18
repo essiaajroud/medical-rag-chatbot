@@ -40,12 +40,29 @@ class MultilingualBehaviorTests(unittest.IsolatedAsyncioTestCase):
                 run.assert_not_awaited()
         self.assertIsNone(get_greeting("Hello, what is diabetes?"))
 
-    async def test_rag_prompt_uses_detected_language_and_no_context_has_no_sources(self):
-        store = type("Store", (), {"search": lambda self, query, k: ([], [])})()
-        with patch.object(rag_pipeline, "generate", new=AsyncMock(return_value="La réponse")) as generate:
-            result = await rag_pipeline.rag_answer("Quels sont les signes du diabète ?", store)
-        self.assertIn("French", generate.await_args.args[0])
+    
+    async def test_rag_without_context_returns_localized_fallback_without_sources(self):
+        store = type("Store", (), {
+            "search": lambda self, query, k: ([], [])
+        })()
+
+        with patch.object(
+            rag_pipeline,
+            "generate",
+            new=AsyncMock(return_value="La réponse")
+        ) as generate:
+            result = await rag_pipeline.rag_answer(
+                "Quels sont les signes du diabète ?",
+                store
+            )
+
+        self.assertIn(
+            "Je n’ai pas trouvé suffisamment d’informations",
+            result["answer"]
+        )
         self.assertEqual(result["sources"], [])
+        generate.assert_not_awaited()
+
 
     async def test_emergency_priority(self):
         self.assertEqual(detect_emergency_type("I have chest pain and difficulty breathing."), "cardiac")
