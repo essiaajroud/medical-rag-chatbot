@@ -7,14 +7,9 @@ import TypingIndicator from "./components/TypingIndicator";
 import SuggestionChips from "./components/SuggestionChips";
 import { motion } from "framer-motion";
 import DoctorIllustration from "./components/DoctorIllustration"
+import type { Message } from "./types/chat";  
+import { askMediBot } from "./services/mediBotApi";
 
-  type Message = {
-    id: number;
-    sender: "bot" | "user";
-    message: string;
-    time: string;
-    sources?: unknown[];
-  };
   const getCurrentTime = () => new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   const API_BASE_URL = (import.meta.env.VITE_API_URL || "http://127.0.0.1:8000").replace(/\/$/, "");
 function App() {
@@ -55,64 +50,91 @@ const clearConversation = () => {
     },
   ])
 }
+
 const sendMessage = async () => {
   const userMessage = message.trim();
+
   if (!userMessage || requestInFlight.current) return;
 
   requestInFlight.current = true;
+
   const controller = new AbortController();
   activeRequest.current = controller;
-  setMessages((current) => [...current, {
-    id: Date.now(), sender: "user", message: userMessage, time: getCurrentTime(),
-  }]);
+
+  
+  const history = messages
+    .slice(-12)
+    .map((item) => ({
+      sender: item.sender,
+      message: item.message,
+    }))
+    .filter(
+      (item) => item.sender === "user" || item.sender === "bot"
+    );
+
+
+  setMessages((current) => [
+    ...current,
+    {
+      id: Date.now(),
+      sender: "user",
+      message: userMessage,
+      time: getCurrentTime(),
+    },
+  ]);
+
   setMessage("");
   setIsTyping(true);
-  const timeout = window.setTimeout(() => controller.abort(), 30000);
+
+  const timeout = window.setTimeout(() => {
+    controller.abort();
+  }, 60000);
+
   try {
-    
-    const history = messages
-      .filter((item) => item.message.trim().length > 0)
-      .slice(-12)
-      .map((item) => ({
-        sender: item.sender,
-        message: item.message,
-      }));
+    // Appel du service API MediBot
+    const data = await askMediBot(
+      userMessage,
+      history,
+      controller.signal
+    );
 
-    const response = await fetch(`${API_BASE_URL}/ask`, {
-      method: "POST",
-      signal: controller.signal,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        question: userMessage,
-        history,
-      }),
-    });
+    // Ajouter la réponse et les sources au chat
+    const botMessage: Message = {
+      id: Date.now(),
+      sender: "bot",
+      message: data.answer,
+      time: getCurrentTime(),
+      sources: data.sources,
+    };
 
-    if (!response.ok) throw new Error("http");
-    let data: unknown;
-    try { data = await response.json(); } catch { throw new Error("invalid-json"); }
-    if (!data || typeof data !== "object" || !("answer" in data) || typeof data.answer !== "string" || !data.answer.trim()) {
-      throw new Error("invalid-answer");
-    }
-    const sources = "sources" in data && Array.isArray(data.sources) ? data.sources : [];
-    setMessages((current) => [...current, {
-      id: Date.now(), sender: "bot", message: data.answer as string, time: getCurrentTime(), sources,
-    }]);
+    setMessages((current) => [...current, botMessage]);
   } catch (error) {
-    if (controller.signal.aborted && activeRequest.current !== controller) return;
+    // Si la conversation a été effacée pendant la requête,
+    // ne pas ajouter une erreur à la nouvelle conversation.
+    if (controller.signal.aborted && activeRequest.current !== controller) {
+      return;
+    }
+
     const errorMessage = controller.signal.aborted
       ? "La demande a pris trop de temps. Veuillez réessayer."
       : error instanceof TypeError
         ? "Impossible de joindre MediBot. Vérifiez que le serveur est démarré puis réessayez."
-        : error instanceof Error && error.message === "http"
+        : error instanceof Error && error.message.startsWith("http-")
           ? "Le serveur MediBot a rencontré une erreur. Veuillez réessayer."
           : "La réponse du serveur est invalide. Veuillez réessayer.";
-    setMessages((current) => [...current, { id: Date.now(), sender: "bot", message: errorMessage, time: getCurrentTime() }]);
+
+    setMessages((current) => [
+      ...current,
+      {
+        id: Date.now(),
+        sender: "bot",
+        message: errorMessage,
+        time: getCurrentTime(),
+      },
+    ]);
   } finally {
     window.clearTimeout(timeout);
+
     if (activeRequest.current === controller) {
       activeRequest.current = null;
       requestInFlight.current = false;
@@ -120,6 +142,7 @@ const sendMessage = async () => {
     }
   }
 };
+
 const [isDarkMode, setIsDarkMode] = useState(() => {
   return localStorage.getItem("medibot-theme") === "dark"
 })

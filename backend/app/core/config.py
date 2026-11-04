@@ -35,9 +35,9 @@ if LLM_PROVIDER not in {"gemini", "ollama"}:
 TOP_K = int(os.getenv("TOP_K", "2"))
 
 SIM_THRESHOLD = float(
-    os.getenv("SIM_THRESHOLD", "0.50")
+    os.getenv("SIM_THRESHOLD", "0.35")
 )
 
 RAG_CONTEXT_THRESHOLD = float(
-    os.getenv("RAG_CONTEXT_THRESHOLD", "0.50")
+    os.getenv("RAG_CONTEXT_THRESHOLD", "0.35")
 )

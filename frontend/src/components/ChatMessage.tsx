@@ -1,31 +1,50 @@
 import { motion } from "framer-motion"
 import BotAvatar from "./BotAvatar"
+import type { Source } from "../types/chat";
+
+
 
 type ChatMessageProps = {
   message: string
   sender: "bot" | "user"
   time?: string
   isDarkMode: boolean
-  sources?: unknown[]
+  sources?: Source[];
 }
 
 function ChatMessage({ message, sender, time, isDarkMode, sources = [] }: ChatMessageProps) {
   const isBot = sender === "bot"
+  
   const displaySources = sources.flatMap((source) => {
-    if (!source || typeof source !== "object") return []
-    const item = source as Record<string, unknown>
-    const title = [item.name, item.title, item.label].find((value) => typeof value === "string" && value.trim())
-    const rawUrl = item.url ?? item.href
-    let url: string | undefined
+    const title = [source.name, source.title, source.label].find(
+      (value) => typeof value === "string" && value.trim().length > 0
+    );
+
+    const rawUrl = source.url ?? source.href;
+    let url: string | undefined;
+
     if (typeof rawUrl === "string") {
       try {
-        const parsed = new URL(rawUrl)
-        if (parsed.protocol === "http:" || parsed.protocol === "https:") url = parsed.toString()
-      } catch { /* Ignore malformed source URLs. */ }
+        const parsed = new URL(rawUrl);
+
+        if (parsed.protocol === "https:" || parsed.protocol === "http:") {
+          url = parsed.toString();
+        }
+      } catch {
+        // Ignore les URL invalides.
+      }
     }
-    if (!title && !url) return []
-    return [{ title: typeof title === "string" ? title : url!, url }]
-  })
+
+    if (!title && !url) return [];
+
+    return [
+      {
+        title: title ?? url!,
+        url,
+      },
+    ];
+  });
+
 
   return (
 

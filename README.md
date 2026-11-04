@@ -1,291 +1,434 @@
-# MediBot — Medical Chatbot with RAG
+# MediBot — Documentation technique du projet
 
-MediBot is a medical question-answering chatbot built with **Retrieval-Augmented Generation (RAG)**. It retrieves relevant information from a medical knowledge base and uses a language model to generate responses grounded in the available context.
+**Version :** 1.0 — Documentation initiale  
+**Type de projet :** Chatbot médical intelligent basé sur le RAG  
+**Statut :** Prototype fonctionnel en phase de validation
 
-The project combines a Python backend, semantic vector search, language-model integration, and a conversational web interface.
+---
 
-> **Medical disclaimer:** MediBot is an educational and informational project. It does not replace a qualified healthcare professional, medical diagnosis, or emergency medical care. In an emergency, contact local emergency services immediately.
+## 1. Présentation générale
 
-## Table of Contents
+MediBot est un chatbot médical conçu pour fournir aux utilisateurs des informations générales sur la santé à partir d'une base documentaire médicale.
 
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Architecture](#architecture)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Running the Application](#running-the-application)
-- [API Documentation](#api-documentation)
-- [Testing](#testing)
-- [Medical Safety](#medical-safety)
-- [Troubleshooting](#troubleshooting)
-- [Future Improvements](#future-improvements)
+Le système repose sur une architecture RAG (*Retrieval-Augmented Generation*). Cette approche permet de rechercher des informations dans une base documentaire avant de générer une réponse avec un modèle de langage.
 
-## Features
+L'objectif principal est de limiter les réponses médicales non documentées et de fournir des réponses accompagnées de références médicales lorsque celles-ci sont disponibles.
 
-- Medical question answering using Retrieval-Augmented Generation.
-- Semantic retrieval with FAISS.
-- Text embeddings generated with Sentence Transformers.
-- Language-model integration with Gemini and an optional Ollama provider.
-- Multilingual question handling, including English, French, and Arabic.
-- Source metadata for relevant medical information.
-- Emergency symptom detection and priority handling.
-- Fallback responses when the retrieved context is insufficient.
-- Automated tests for emergency detection, retrieval behavior, and multilingual handling.
+MediBot ne remplace pas un médecin et ne doit pas être utilisé comme outil de diagnostic médical.
 
-These features are subject to the current implementation and the contents of the medical knowledge base.
+## 2. Architecture technique
 
-## Technology Stack
+### 2.1 Technologies utilisées
 
-| Component | Technology |
-|---|---|
-| Backend API | Python, FastAPI |
-| Question routing | LangGraph |
-| Retrieval-augmented generation | Custom RAG pipeline |
-| Vector search | FAISS |
-| Text embeddings | Sentence Transformers |
-| Embedding model | `paraphrase-multilingual-MiniLM-L12-v2` or the model configured by the application |
-| Language model | Gemini API |
-| Alternative language model | Ollama |
-| Frontend | React, Vite, TypeScript |
-| Testing | pytest |
+| Composant | Technologie | Rôle |
+|---|---|---|
+| Frontend | React | Interface utilisateur |
+| Langage frontend | TypeScript | Typage et structuration du frontend |
+| Outil frontend | Vite | Environnement de développement et compilation |
+| Backend | Python | Logique applicative |
+| API | FastAPI | Communication entre frontend et backend |
+| Orchestration IA | LangGraph | Routage et organisation des étapes de traitement |
+| Recherche vectorielle | FAISS | Recherche des documents pertinents |
+| Embeddings | Sentence Transformers | Transformation des textes en vecteurs |
+| Modèle d'embeddings | paraphrase-multilingual-MiniLM-L12-v2 | Représentation vectorielle multilingue |
+| LLM | Gemini | Génération des réponses à partir du contexte |
+| Format documentaire | JSON | Stockage des fiches médicales |
 
-Check the actual embedding configuration and dependency files before treating this table as a complete inventory.
+### 2.2 Architecture générale
 
-## Architecture
+Le système est organisé en deux parties principales :
 
-MediBot follows a retrieval-augmented question-answering workflow:
+- **Frontend :** permet à l'utilisateur de communiquer avec MediBot.
+- **Backend :** traite les questions, effectue la recherche documentaire, organise le routage et génère les réponses.
 
-1. The user submits a question through the chat interface.
-2. The backend identifies the question's language and determines how to route it.
-3. Emergency detection checks for supported emergency indicators.
-4. For regular medical questions, the retrieval layer searches the FAISS index.
-5. Relevant documents are filtered according to the configured context threshold.
-6. The language model generates an answer using the selected context.
-7. The backend returns the answer and available source references to the frontend.
+Le fonctionnement général est le suivant :
 
-If no relevant documents are retained, the current RAG pipeline can return a localized fallback response without calling the generation model.
+1. L'utilisateur saisit une question dans l'interface React.
+2. Le frontend envoie la question et l'historique conversationnel à l'API FastAPI.
+3. Le backend transmet les informations au workflow LangGraph.
+4. Le routeur analyse la question et détermine le chemin de traitement.
+5. Si une recherche documentaire est appropriée, FAISS recherche les fiches médicales pertinentes.
+6. Les documents retenus sont transmis au pipeline RAG.
+7. Gemini génère une réponse à partir du contexte documentaire.
+8. Le backend retourne la réponse et les sources disponibles.
+9. Le frontend affiche le résultat dans la conversation.
 
-## Project Structure
-
-The following is an overview of the known application modules. Confirm the complete directory layout in the repository.
+### 2.3 Schéma fonctionnel
 
 ```text
-Chatbot_with_RAG/
-├── README.md
-├── backend/
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── agent.py
-│   │   ├── api/
-│   │   │   └── routes.py
-│   │   ├── core/
-│   │   │   └── language_utils.py
-│   │   ├── data/
-│   │   │   └── loader.py
-│   │   ├── llm/
-│   │   │   └── llm_service.py
-│   │   └── rag/
-│   │       ├── faiss_store.py
-│   │       └── rag_pipeline.py
-│   ├── data/
-│   ├── scripts/
-│   ├── tests/
-│   ├── requirements.txt
-│   └── .env
-└── frontend/
-    ├── src/
-    ├── public/
-    ├── package.json
-    └── ...
+                    UTILISATEUR
+                         |
+                         v
+                FRONTEND REACT
+                 + TypeScript
+                         |
+                         v
+                  API FASTAPI
+                      /ask
+                         |
+                         v
+                 WORKFLOW LANGGRAPH
+                         |
+                         v
+                  ROUTER NODE
+                         |
+       +-----------------+------------------+
+       |                 |                  |
+       v                 v                  v
+   URGENCE          CLASSIFICATION       AUTRES CAS
+       |                 |
+       |          +------+-------+
+       |          |              |
+       |          v              v
+       |         RAG          NO EVIDENCE
+       |          |
+       |          v
+       |      FAISS SEARCH
+       |          |
+       |          v
+       |    DOCUMENT FILTER
+       |          |
+       |          v
+       |     RAG PIPELINE
+       |          |
+       |          v
+       |        GEMINI
+       |          |
+       +----------+-------------------------+
+                         |
+                         v
+                 RÉPONSE FINALE
+                         |
+                         v
+                    FRONTEND
 ```
 
-### Important modules
+*Ce schéma représente le fonctionnement logique observé et défini dans le projet. Les connexions exactes entre tous les nœuds doivent être confirmées dans le code LangGraph.*
 
-- `app/main.py`: FastAPI application entry point.
-- `app/api/routes.py`: API routes used by the frontend.
-- `app/agent.py`: question classification, routing, and emergency detection.
-- `app/rag/rag_pipeline.py`: retrieval filtering, prompt construction, and answer generation.
-- `app/rag/faiss_store.py`: vector-search implementation.
-- `app/llm/llm_service.py`: language-model integration.
-- `app/core/language_utils.py`: language detection and localized text.
-- `app/data/loader.py`: medical data loading.
-- `tests/`: automated tests.
-- `scripts/`: validation, evaluation, and development utilities.
+## 3. Organisation du backend
 
-## Prerequisites
+Le backend est organisé autour de plusieurs responsabilités.
 
-- Python with a version compatible with the project's dependencies.
-- Node.js and npm for the React/Vite frontend.
-- A Gemini API key if the Gemini provider is enabled.
-- Git for version control.
+### 3.1 Chargement des données
 
-Ollama is needed only if the application is configured to use the local Ollama provider.
+Le fichier documentaire utilisé est :
 
-## Installation
+`backend/data/data_enriched_v3.json`
 
-### 1. Clone the repository
+Le chargement est effectué dans `backend/app/main.py`, avec le loader situé dans :
+
+`backend/app/data/loader.py`
+
+Le loader utilise `json.load()` pour lire les fiches médicales.
+
+Au démarrage, les données sont chargées et utilisées pour initialiser le moteur de recherche vectorielle.
+
+### 3.2 Recherche vectorielle — FAISS
+
+Le composant FAISS permet de retrouver les documents correspondant le mieux à une question.
+
+Les embeddings sont calculés à partir des informations textuelles des fiches, notamment :
+
+- La question.
+- La réponse.
+- Les mots-clés.
+- Les questions associées.
+- La catégorie.
+
+Le modèle utilisé est :
+
+`paraphrase-multilingual-MiniLM-L12-v2`
+
+La recherche retourne les documents candidats accompagnés de scores de similarité.
+
+Les seuils actuellement observés dans les logs sont :
+
+- Seuil du routeur : `0.35`
+- Seuil de sélection du contexte RAG : `0.35`
+
+Ces seuils doivent être évalués sur un ensemble représentatif de questions avant d'être considérés comme définitifs.
+
+### 3.3 Orchestration avec LangGraph
+
+LangGraph organise les différentes étapes de traitement.
+
+Les nœuds identifiés dans l'architecture actuelle comprennent :
+
+- `router_node` : analyse la question et détermine le chemin de traitement.
+- `rag_node` : traite les questions pouvant être résolues avec la base documentaire.
+- `llm_node` : traite les cas généraux autorisés.
+- `emergency_node` : gère les situations d'urgence.
+- `out_of_scope_node` : traite les questions hors du domaine médical.
+- `unclear_node` : demande une reformulation lorsque la question n'est pas comprise.
+- `sources_request_node` : traite les demandes de références.
+- `no_evidence_node` : indique que la base documentaire ne contient pas suffisamment d'informations.
+
+Le système doit éviter de générer une réponse médicale non documentée lorsqu'aucune preuve suffisante n'est disponible.
+
+### 3.4 Génération avec Gemini
+
+Gemini est utilisé pour formuler une réponse à partir des documents sélectionnés par le pipeline RAG.
+
+Le pipeline transmet les documents disponibles au modèle et récupère les identifiants des documents effectivement utilisés.
+
+Les sources retournées sont limitées aux documents validés comme utilisés pour produire la réponse.
+
+Cette distinction permet d'éviter de présenter comme référence une fiche qui aurait simplement été retrouvée par FAISS, mais qui n'aurait pas servi à générer la réponse.
+
+## 4. Structure des données médicales
+
+Chaque fiche médicale contient les informations suivantes :
+
+| Champ | Description |
+|---|---|
+| `id` | Identifiant unique |
+| `question` | Question médicale principale |
+| `answer` | Réponse documentaire |
+| `keywords` | Mots-clés médicaux et synonymes |
+| `category` | Catégorie de la fiche |
+| `severity` | Niveau de gravité associé |
+| `related_questions` | Questions associées |
+| `source_name` | Nom de la source médicale |
+| `source_url` | URL de la référence |
+| `reviewed_at` | Date de vérification |
+| `language` | Langue de la fiche |
+
+Exemple simplifié :
+
+```json
+{
+  "id": 37,
+  "question": "What are the symptoms of appendicitis?",
+  "answer": "Appendicitis often starts with abdominal pain...",
+  "keywords": [
+    "appendicitis",
+    "abdominal pain",
+    "nausea"
+  ],
+  "category": "disease",
+  "severity": "high",
+  "related_questions": [
+    "What causes appendicitis?"
+  ],
+  "source_name": "NHS",
+  "source_url": "https://www.nhs.uk/conditions/appendicitis/",
+  "reviewed_at": null,
+  "language": "en"
+}
+```
+
+## 5. Gestion de la conversation
+
+Le backend reçoit également l'historique conversationnel.
+
+Chaque message possède deux champs :
+
+- `sender` : utilisateur ou bot.
+- `message` : contenu du message.
+
+Exemple :
+
+```json
+[
+  {
+    "sender": "user",
+    "message": "What are the symptoms of appendicitis?"
+  },
+  {
+    "sender": "bot",
+    "message": "Appendicitis often starts with pain..."
+  }
+]
+```
+
+Le système utilise notamment l'historique pour résoudre les questions de suivi et déterminer le sujet précédemment abordé.
+
+La résolution des questions de suivi doit être testée afin de garantir que la question actuelle n'est pas confondue avec un ancien sujet.
+
+## 6. Tests déjà réalisés
+
+Les résultats suivants sont issus des logs de test communiqués.
+
+### Test 1 — Symptômes de l'appendicite
+
+**Question :** What are the symptoms of appendicitis?
+
+Résultats :
+
+- Document retrouvé : ID 37.
+- Score FAISS : `0.8396`.
+- Document retenu par le filtre : ID 37.
+- Document utilisé par Gemini : ID 37.
+- Source retournée : NHS.
+
+**Résultat :** Réussi.
+
+### Test 2 — Causes de l'appendicite
+
+**Question :** What causes appendicitis?
+
+Résultats :
+
+- Le workflow est entré dans `unclear_node`.
+- Aucune recherche RAG n'a été effectuée.
+- MediBot a demandé une reformulation et a proposé des sujets sans rapport direct avec la question.
+
+**Résultat :** Échec fonctionnel à corriger.
+
+Cause possible : la classification de l'intention ou la résolution de la question n'identifie pas correctement cette question médicale. Le code du routeur et du nœud de clarification doit être inspecté pour déterminer la cause exacte.
+
+### Test 3 — Antibiotiques et rhume
+
+**Question :** Can antibiotics cure a common cold?
+
+Résultats :
+
+- Document ID 18 retrouvé avec un score de `0.8100`.
+- Document ID 3 retrouvé avec un score de `0.4625`.
+- Documents retenus : ID 18 et ID 3.
+- Document utilisé par Gemini : ID 18.
+- Source retournée : CDC.
+
+**Résultat :** Réussi.
+
+### Test 4 — Signes d'AVC
+
+**Question :** What are the warning signs of a stroke?
+
+Résultats :
+
+- Document ID 20 retrouvé avec un score de `0.8117`.
+- Document ID 21 retrouvé avec un score de `0.4539`.
+- Documents retenus : ID 20 et ID 21.
+- Document utilisé par Gemini : ID 20.
+- Source retournée : NHS.
+
+**Résultat :** Réussi.
+
+### Test 5 — Douleur thoracique sévère
+
+**Question :** What should I do if I have severe chest pain?
+
+Résultat observé :
+
+MediBot a répondu que la douleur thoracique pouvait signaler une urgence, a recommandé d'appeler immédiatement les services d'urgence locaux et de ne pas conduire soi-même.
+
+**Résultat :** Réponse d'urgence appropriée observée.
+
+**Limite du test :** Les lignes de routage correspondantes ne sont pas présentes dans les logs fournis. Le déclenchement exact du nœud d'urgence reste donc à confirmer.
+
+### Test 6 — Question hors domaine
+
+**Question :** What is the capital of Tunisia?
+
+Résultat :
+
+MediBot a expliqué qu'il s'agissait d'un assistant d'information médicale et qu'il ne pouvait pas traiter ce sujet.
+
+**Résultat :** Réussi.
+
+## 7. État actuel du projet
+
+Les éléments suivants sont fonctionnels selon les tests disponibles :
+
+- Communication avec l'API FastAPI.
+- Recherche vectorielle FAISS.
+- Sélection des documents pertinents.
+- Génération de réponses avec Gemini.
+- Retour des sources utilisées.
+- Réponse à certaines questions médicales.
+- Gestion d'une question hors domaine.
+- Réponse d'urgence observée pour une douleur thoracique.
+
+Les éléments qui nécessitent encore des vérifications :
+
+- Résolution des questions de suivi.
+- Classification des intentions médicales.
+- Cohérence des messages du nœud `unclear_node`.
+- Détection et routage des urgences.
+- Gestion des erreurs et des réponses sans preuve.
+- Qualité générale des réponses sur un ensemble de questions plus large.
+
+## 8. Problèmes identifiés et améliorations
+
+### Problème 1 — Question de suivi sur l'appendicite
+
+La question « What causes appendicitis? » n'a pas été traitée par le RAG, alors qu'elle concerne le même sujet médical que la question précédente.
+
+Action :
+
+- Examiner la fonction de résolution des questions de suivi.
+- Examiner la classification des intentions.
+- Vérifier les conditions qui conduisent à `unclear_node`.
+- Ajouter une fiche documentaire sur les causes de l'appendicite uniquement si la base ne couvre pas suffisamment ce sujet.
+
+### Problème 2 — Fiabilité du routage d'urgence
+
+Action :
+
+- Tester plusieurs formulations de douleur thoracique.
+- Tester les signes d'AVC.
+- Tester les difficultés respiratoires.
+- Vérifier que le routage d'urgence intervient avant la recherche documentaire classique lorsque les critères d'urgence sont présents.
+
+### Problème 3 — Avertissement AFC de Gemini
+
+Les logs affichent un avertissement concernant l'utilisation de l'Automatic Function Calling avec `AsyncModels.generate_content`.
+
+Cet avertissement n'a pas empêché les réponses testées de fonctionner.
+
+Action :
+
+- Garder ce point comme amélioration technique.
+- Examiner la documentation de la version Gemini utilisée avant de modifier l'implémentation.
+- Ne pas modifier le système simplement pour supprimer un avertissement sans vérifier les conséquences.
+
+## 9. Prochaines étapes de développement
+
+Ordre de travail proposé :
+
+1. Corriger le problème de compréhension de « What causes appendicitis? ».
+2. Tester la résolution des questions de suivi.
+3. Réaliser une campagne complète de tests d'urgence.
+4. Tester les questions médicales absentes de la base.
+5. Évaluer la qualité des résultats FAISS.
+6. Améliorer progressivement la base documentaire.
+7. Tester les échanges frontend/backend.
+8. Vérifier l'affichage des sources médicales.
+9. Mesurer les performances du système.
+10. Préparer une documentation utilisateur et une démonstration finale.
+
+## 10. Commandes de lancement
+
+### Backend
+
+Depuis le dossier `backend` :
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
-cd Chatbot_with_RAG
-```
-
-Replace `<YOUR_REPOSITORY_URL>` with the actual Git repository URL.
-
-### 2. Set up the backend
-
-```powershell
-cd backend
-
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-If PowerShell blocks virtual-environment activation, use the appropriate activation method for your system or execute the environment's Python directly.
-
-### 3. Configure environment variables
-
-Create a `.env` file in the backend directory if it is not already present.
-
-Example configuration:
-
-```dotenv
-LLM_PROVIDER=gemini
-GEMINI_API_KEY=your_gemini_api_key
-GEMINI_MODEL_NAME=gemini-2.5-flash
-```
-
-The exact supported variable names and defaults must match the current configuration code. Do not commit real API keys or other secrets to Git.
-
-### 4. Install the frontend dependencies
-
-Open another terminal and navigate to the actual frontend directory:
-
-```powershell
-cd ..\frontend
-
-npm install
-```
-
-Use the directory containing the frontend's `package.json` if its name differs from `frontend`.
-
-## Running the Application
-
-### Start the backend
-
-From the backend directory, with the virtual environment activated:
-
-```powershell
 uvicorn app.main:app --reload
 ```
 
-The local API is expected to be available at:
+Le serveur est actuellement utilisé localement sur :
 
 `http://127.0.0.1:8000`
 
-FastAPI's interactive API documentation is normally available at:
+### Frontend
 
-`http://127.0.0.1:8000/docs`
+Depuis le dossier du frontend :
 
-### Start the frontend
-
-From the frontend directory:
-
-```powershell
+```bash
+npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite in the terminal.
+L'adresse exacte du frontend dépend de la configuration Vite.
 
-The frontend must be configured to send requests to the running backend. Use the API URL and environment-variable conventions defined by the actual frontend code.
+## 11. Conclusion
 
-## API Documentation
+MediBot dispose d'une première architecture RAG fonctionnelle combinant React, FastAPI, LangGraph, FAISS, Sentence Transformers et Gemini.
 
-Once the backend is running, open:
+Les tests montrent que le système peut retrouver une fiche médicale pertinente, transmettre le contexte au modèle de langage et retourner une réponse accompagnée de sa source.
 
-`http://127.0.0.1:8000/docs`
+La priorité actuelle n'est pas d'ajouter immédiatement de nouvelles fonctionnalités, mais de fiabiliser le routage, la compréhension des questions de suivi et la gestion des situations urgentes.
 
-This page lists the API endpoints registered by FastAPI and allows supported requests to be tested interactively.
-
-Refer to `app/api/routes.py` for the request and response schemas. Do not assume endpoint names or payload formats without checking the implementation.
-
-## Testing
-
-Run the backend test suite from the backend directory:
-
-```powershell
-python -m pytest -q
-```
-
-Run Python syntax and compilation checks:
-
-```powershell
-python -m compileall -q app scripts
-```
-
-The test suite includes checks for multilingual behavior and emergency detection, including tests of whether supported emergency cases bypass normal retrieval and generation paths.
-
-Passing automated tests does not establish clinical validity or guarantee that all emergencies will be detected.
-
-## Medical Safety
-
-MediBot should be developed and evaluated with the following principles:
-
-- Emergency indicators must take priority over routine question answering.
-- The chatbot must not present a symptom list as a confirmed diagnosis.
-- Answers must not claim to be supported by sources that were not actually retrieved and verified.
-- Insufficient evidence should lead to an appropriate fallback response.
-- Source metadata must be validated before it is presented as a citation.
-- Medical content should be reviewed against reliable medical references.
-- Emergency behavior must be evaluated for both false negatives and false positives.
-- The application must not replace professional medical care.
-
-## Troubleshooting
-
-### The backend cannot start
-
-- Activate the intended Python environment.
-- Install dependencies from the backend requirements file.
-- Check that the command is executed from the backend directory.
-- Review the terminal error for missing modules or configuration problems.
-
-### Gemini requests fail
-
-- Confirm that the API key is configured in the environment used by the backend.
-- Verify the selected model name and API access.
-- Inspect the backend logs for authentication, quota, timeout, or provider errors.
-- Never print or commit the full API key.
-
-### The chatbot returns an insufficient-context response
-
-- Confirm that the medical dataset is present and loaded.
-- Verify that the FAISS index contains the expected records.
-- Check the retrieval scores and context threshold.
-- Confirm that the question is covered by the available medical documents.
-
-### The frontend cannot reach the backend
-
-- Confirm that FastAPI is running.
-- Check the backend URL configured in the frontend.
-- Inspect browser developer tools for network or CORS errors.
-- Verify the request path and payload against the FastAPI documentation.
-
-## Future Improvements
-
-Potential areas for future work include:
-
-- Expanding and reviewing the medical knowledge base.
-- Improving multilingual retrieval and evaluation.
-- Adding regression tests for emergency detection.
-- Measuring retrieval quality and answer faithfulness.
-- Improving source transparency and medical content review.
-- Adding reproducible evaluation reports and development documentation.
-
-## Disclaimer
-
-MediBot is a software development and research project for medical information retrieval and question answering. It is not a certified medical device and must not be relied on as the sole basis for clinical decisions.
+Cette documentation constitue une première référence technique. Elle devra être complétée après vérification de l'ensemble des fichiers du dépôt, notamment des routes API, du graphe LangGraph, du pipeline RAG et de la configuration du frontend.

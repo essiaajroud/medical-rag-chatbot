@@ -3,6 +3,8 @@ from app.core.config import TOP_K, RAG_CONTEXT_THRESHOLD
 import httpx
 from urllib.parse import urlparse
 from app.core.language_utils import detect_language, language_name
+import json
+import re
 
 def _source_from_document(doc):
     """Return a public HTTP(S) citation, or None for missing/untrusted metadata."""
@@ -102,20 +104,28 @@ async def rag_answer(query, store, retrieval=None):
 
     context_parts = []
 
-    for doc in selected_documents:
+    for i, doc in enumerate(selected_documents, start=1):
+        keywords = doc.get("keywords", [])
+        related = doc.get("related_questions", [])
+
+        if not isinstance(keywords, list):
+            keywords = []
+        if not isinstance(related, list):
+            related = []
+
         part = (
-            f"Question source : {doc.get('question', '')}\n"
-            f"Réponse source : {doc.get('answer', '')}\n"
-            f"Mots-clés : {', '.join(doc.get('keywords', []))}\n"
-            f"Questions liées : "
-            f"{', '.join(doc.get('related_questions', []))}"
+            f"[DOCUMENT {i}]\n"
+            f"Question : {doc.get('question', '')}\n"
+            f"Réponse : {doc.get('answer', '')}\n"
+            f"Mots-clés : {', '.join(map(str, keywords))}\n"
+            f"Questions liées : {', '.join(map(str, related))}"
         )
 
         source = _source_from_document(doc)
         if source:
             part += (
-                f"\nSource documentaire : "
-                f"{source['name']} ({source['url']})"
+                f"\nSource : {source['name']}\n"
+                f"URL : {source['url']}"
             )
 
         context_parts.append(part)
@@ -124,39 +134,83 @@ async def rag_answer(query, store, retrieval=None):
     sources = _unique_sources(selected_documents)
 
     prompt = f"""
-    You are MediBot, a medical information assistant. Respond entirely in {response_language}.
+        You are MediBot, a medical information assistant.
+        Respond entirely in {response_language}.
 
-    Answer the question using the supplied documents as evidence.
+        Use only medical facts supported by the supplied document answers.
 
-    Mandatory rules:
-    - Answer entirely in {response_language}, the language of the user's latest question.
-    - Use only medical facts supported by the supplied document answers.
-    - Review the answers, keywords, and related questions before deciding whether information is absent.
-    - If the documents answer only part of the question, provide only the supported information.
-    - Never present symptoms as confirmation of a diagnosis.
-    - Do not invent symptoms, treatments, dosages, sources, titles, or URLs.
-    - If the documents do not contain the requested information, state that clearly.
-    - Do not claim that a source supports a fact it does not contain.
-    
+        Rules:
+        - Never invent medical facts, sources, titles, or URLs.
+        - Never treat symptoms as confirmation of a diagnosis.
+        - If the documents do not support an answer, state that clearly.
+        - Select only document IDs that directly support the medical
+        information in your answer.
+        - Related questions and keywords are retrieval aids, not proof.
+        - Do not select a document merely because its topic is similar.
+        - Do not include a greeting unless the user greeted you.
+        - For emergency symptoms, give clear and immediate safety advice.
 
-    Documents :
-    {context}
+        Return ONLY a valid JSON object in this exact structure:
+        {{
+        "answer": "Your complete answer in {response_language}",
+        "used_document_ids": [1, 2]
+        }}
 
-    Question :
-    {query}
+        Use an empty list for used_document_ids if no document supports
+        the answer. IDs must refer to the numbered documents below.
 
-    Answer in {response_language}:
-    """
+        Documents:
+        {context}
+
+        User question:
+        {query}
+        """
 
     try:
-        answer = await generate(prompt)
+        raw = await generate(prompt)
+
+        if not isinstance(raw, str) or not raw.strip():
+            raise ValueError("Le modèle a retourné une réponse vide.")
+
+        # Tolère les blocs Markdown autour du JSON.
+        raw = raw.strip()
+        raw = re.sub(r"^```(?:json)?\s*", "", raw)
+        raw = re.sub(r"\s*```$", "", raw)
+
+        result = json.loads(raw)
+
+        answer = result.get("answer")
+        used_ids = result.get("used_document_ids", [])
 
         if not isinstance(answer, str) or not answer.strip():
-            raise ValueError("Le modèle a retourné une réponse vide.")
+            raise ValueError("Le JSON ne contient pas de réponse valide.")
+
+        if not isinstance(used_ids, list):
+            used_ids = []
+
+        valid_ids = {
+            doc_id
+            for doc_id in range(1, len(selected_documents) + 1)
+        }
+
+        used_ids = list(dict.fromkeys(
+            doc_id
+            for doc_id in used_ids
+            if type(doc_id) is int and doc_id in valid_ids
+        ))
+
+        used_documents = [
+            selected_documents[doc_id - 1]
+            for doc_id in used_ids
+        ]
+        print("DOCUMENTS UTILISÉS :", [
+         doc.get("id") for doc in used_documents
+        ])
+        print("SOURCES RETOURNÉES :", _unique_sources(used_documents))
 
         return {
             "answer": answer.strip(),
-            "sources": sources,
+            "sources": _unique_sources(used_documents),
         }
 
     except (httpx.TimeoutException, httpx.NetworkError) as exc:

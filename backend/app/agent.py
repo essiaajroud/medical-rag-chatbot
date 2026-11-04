@@ -2,7 +2,7 @@ import re
 import unicodedata
 from typing import TypedDict
 
-from langgraph.graph import StateGraph
+from langgraph.graph import StateGraph, END
 from app.core.config import SIM_THRESHOLD, TOP_K
 
 from app.rag.rag_pipeline import rag_answer, general_answer
@@ -74,6 +74,9 @@ _EMERGENCY_PATTERNS = {
         r"\b(chest pain|chest discomfort|chest pressure|tightness in (my |the )?chest|suspected heart attack|having a heart attack)\b",
         r"\b(douleur (thoracique|dans la poitrine)|oppression thoracique|oppression dans la poitrine|forte oppression dans la poitrine|serrement (dans la poitrine|thoracique)|suspicion d'infarctus|je fais un infarctus)\b",
         r"\b(crushing pressure in (my|the) chest|crushing chest pressure|severe pressure in (my|the) chest)\b",
+        r"\bdouleur\s+(?:a\s+la\s+)?poitrine\b",
+        r"\bdouleur\s+thoracique\b",
+        r"\bforte\s+douleur\s+(?:a\s+la\s+)?poitrine\b",
     ),
         
     "breathing": (
@@ -83,6 +86,10 @@ _EMERGENCY_PATTERNS = {
         r"\b(je n arrive plus a respirer|je n'arrive plus a respirer|je ne peux plus respirer|je ne parviens plus a respirer)\b",
         r"\b(can barely breathe|can hardly breathe|barely able to breathe)\b",
         r"\b(gasping for air|gasping for breath|struggling for air)\b",
+        r"\bdifficultes?\s+respiratoires?\s+soudaines?\b",
+        r"\brespiration\s+soudainement\s+difficile\b",
+        r"\bessoufflement\s+soudain\b",
+        r"\bj['’]ai\s+soudainement?\s+du\s+mal\s+a\s+respirer\b",
     ),
 
     "breathing_ar": (
@@ -108,7 +115,20 @@ _EMERGENCY_PATTERNS = {
         r"\b(my|his|her|their)\s+face\s+(suddenly\s+)?(looks?|looked|seems?)\s+(uneven|asymmetrical|lopsided)\b",
         r"\b(i suddenly can't get my words out|i suddenly cannot get my words out|suddenly can't get my words out|suddenly cannot get my words out)\b",
         r"\b(i\s+)?suddenly\s+(feel|felt|become|became|have|had)\s+(weak|weakness|numb|numbness)\s+on\s+(one|the left|the right)\s+side\b",
-
+        r"\b(?:my )?face is drooping\b",
+        r"\b(?:facial drooping|face droop(?:ing)?)\b",
+        r"\b(?:difficulty|trouble) speaking\b",
+        r"\bslurred speech\b",
+        r"\bbouche (?:est )?de travers\b",
+        r"\bvisage (?:est )?(?:de travers|affaissé)\b",
+        r"\b(?:difficulté|mal) à parler\b",
+        r"\bparler (?:clairement|correctement)\b",
+        r"\btrouble soudain de la parole\b",
+        r"\bbouche\b.*\bde travers\b",
+        r"\bma bouche\b.*\bde travers\b",
+        r"\bje parle difficilement\b",
+        r"\bparle difficilement\b",
+        r"\bn'arrive plus a parler\b",
     ),
     "unconsciousness": (
         r"\b(unconscious|unresponsive|passed out|fainted|not waking up)\b",
@@ -129,6 +149,9 @@ _EMERGENCY_PATTERNS = {
         r"ضيق\s*(شديد\s*)?في\s*التنفس",
         r"صعوبة\s*(شديدة\s*)?في\s*التنفس",
         r"لا\s*استطيع\s*التنفس",
+        r"\bdouleur\s+(?:à\s+la\s+)?poitrine\b",
+        r"\bdouleur\s+thoracique\b",
+        r"\bforte\s+douleur\s+(?:à\s+la\s+)?poitrine\b",
     ),
 
     "stroke_ar": (
@@ -144,6 +167,23 @@ _EMERGENCY_PATTERNS = {
         r"|فقدان\s*مفاجئ\s*(للتوازن|للنظر)",
         r"(ضعف|خدر|تنميل).{0,30}(مفاجئ|مفاجي|فجائي|فجاي).{0,40}(أحد|احد|جانبي|جانب).{0,30}(جسم|جسمي|الجسم|جسده)",
         r"(أحد|احد)\s+جانبي\s+(الجسم|جسمي|جسده).{0,40}(ضعف|خدر|تنميل)",
+        r"فمي\s+مائل",
+        r"الفم\s+مائل",
+        r"اعوجاج\s+الفم",
+        r"صعوبة\s+الكلام",
+        r"لا\s+أستطيع\s+الكلام",
+        r"تلعثم\s+الكلام",
+        r"فمي\s+مائل",
+        r"الفم\s+مائل",
+        r"اعوجاج\s+الفم",
+        r"لا\s+أستطيع\s+الكلام",
+        r"صعوبة\s+الكلام",
+        r"فمي\s+مايل",
+        r"الفم\s+مايل",
+        r"اعوجاج\s+الفم",
+        r"لا\s+استطيع\s+الكلام",
+        r"صعوبة\s+الكلام",
+        r"تلعثم\s+الكلام",
     ),
 
 }
@@ -199,8 +239,18 @@ def detect_emergency_type(query: str) -> str | None:
 
     # Ensuite, vérifier les autres urgences, même si une douleur
     # thoracique a été explicitement niée.
+    breathing_negation = re.search(
+        r"\b(?:je\s+)?n'ai\s+pas\s+"
+        r"(?:de\s+)?(?:difficulte|mal)\s+"
+        r"a\s+respirer\b",
+        normalized,
+    )
+
     for emergency_type, patterns in _EMERGENCY_PATTERNS.items():
         if emergency_type == "cardiac":
+            continue
+
+        if emergency_type == "breathing" and breathing_negation:
             continue
 
         if any(
@@ -209,6 +259,15 @@ def detect_emergency_type(query: str) -> str | None:
         ):
             return aliases.get(emergency_type, emergency_type)
 
+    # Filet de sécurité pour les formulations respiratoires courantes.
+    if not breathing_negation and re.search(
+        r"\b(?:je\s+)?n'arrive\s+"
+        r"(?:presque\s+)?plus\s+a\s+respirer\b",
+        normalized,
+    ):
+        return "breathing"
+
+    
     return None
 
 
@@ -230,6 +289,17 @@ _SOURCE_REQUEST_PATTERNS = (
     r"\b(sources?|references?|citations?)\b.{0,30}\b(for|of) (your|the) answer\b",
     r"\b(donne|affiche|fournis|liste|partage).{0,50}\b(sources?|references?|citations?)\b",
     r"\b(sources?|references?|citations?)\b.{0,30}\b(de|pour) (ta|votre|la) reponse\b",
+    r"\b(give|show|provide|list|share|send).{0,50}\b(sources?|references?|citations?)\b",
+    r"\b(sources?|references?|citations?)\b.{0,30}\b(for|of) (your|the) answer\b",
+    r"\b(donne|affiche|fournis|liste|partage).{0,50}\b(sources?|references?|citations?)\b",
+    r"\b(sources?|references?|citations?)\b.{0,30}\b(de|pour) (ta|votre|la) reponse\b",
+    r"\b(lien|liens|carte de source|cartes de sources|url|urls)\b",
+    r"\b(link|links|source card|source cards|clickable reference)\b",
+    r"\b(difficultes? respiratoires? soudaines?|"
+    r"respiration soudainement difficile|"
+    r"essoufflement soudain|"
+    r"j'ai soudain du mal a respirer|"
+    r"j'ai soudainement du mal a respirer)\b",
 )
 
 
@@ -262,6 +332,8 @@ _MEDICAL_TERMS = (
     "lupus", "cancer", "tumor", "tumour", "exhaust", "tiredness", "tired",
     "ارتفاع السكر", "ارتفاع السكر في الدم", "السكري", "أعراض", "العطش", "التبول",
     "مرض", "ألم", "حمى", "سعال", "دواء", "علاج", "صداع", "ضغط الدم",
+    "severe dehydration","deshydratation","severe dehydration signs","shortness of breath",
+    "difficulty breathing","difficultes respiratoires","respiration difficile","essoufflement",
 )
 
 
@@ -618,7 +690,10 @@ async def router_node(state):
 
     store = state.get("store")
     if store is None:
-        return {**updated_state, "decision": "llm"}
+        return {
+            **updated_state,
+            "decision": "no_evidence",
+        }
 
     scores, docs = store.search(query, TOP_K)
 
@@ -646,7 +721,10 @@ async def router_node(state):
             "retrieval": (scores, docs),
         }
 
-    return {**updated_state, "decision": "llm"}
+    return {
+    **updated_state,
+    "decision": "no_evidence",
+}
 
 
 
@@ -679,6 +757,35 @@ _EMERGENCY_MESSAGES = {
 }
 
 
+_EMERGENCY_SOURCES = {
+    "stroke": [
+        {
+            "name": "CDC",
+            "url": "https://www.cdc.gov/stroke/signs-symptoms/index.html",
+        }
+    ],
+    "cardiac": [
+        {
+            "name": "NHS",
+            "url": "https://www.nhs.uk/symptoms/chest-pain/",
+        }
+    ],
+    "breathing": [
+        {
+            "name": "NHS",
+            "url": "https://www.nhs.uk/symptoms/shortness-of-breath/",
+        }
+    ],
+    "unconsciousness": [
+        {
+            "name": "NHS",
+            "url": "https://www.nhs.uk/conditions/first-aid/",
+        }
+    ],
+}
+
+
+
 async def rag_node(state):
     return {
         **state,
@@ -694,6 +801,40 @@ async def llm_node(state):
     return {
         **state,
         "response": {"answer": answer, "sources": []},
+    }
+
+async def no_evidence_node(state):
+    language_code = detect_language(state["question"])
+
+    messages = {
+        "fr": (
+            "Je n’ai pas trouvé suffisamment d’informations "
+            "dans ma base documentaire médicale pour répondre "
+            "de façon fiable. Veuillez consulter un professionnel "
+            "de santé."
+        ),
+        "en": (
+            "I could not find enough information in my medical "
+            "knowledge base to answer reliably. Please consult "
+            "a healthcare professional."
+        ),
+        "ar": (
+            "لم أجد معلومات كافية في قاعدة البيانات الطبية "
+            "للإجابة بشكل موثوق. يُرجى استشارة مختص في الرعاية الصحية."
+        ),
+    }
+
+    answer = messages.get(
+        language_code,
+        messages["en"],
+    )
+
+    return {
+        **state,
+        "response": {
+            "answer": answer,
+            "sources": [],
+        },
     }
 
 
@@ -751,7 +892,15 @@ async def emergency_node(state):
 
     else:
         answer = _EMERGENCY_MESSAGES.get(emergency_type, _EMERGENCY_MESSAGES["other"])
-    return {**state, "response": answer}
+    sources = _EMERGENCY_SOURCES.get(emergency_type, [])
+
+    return {
+        **state,
+        "response": {
+            "answer": answer,
+            "sources": sources,
+        },
+    }
 
 
 async def out_of_scope_node(state):
@@ -830,12 +979,15 @@ builder.add_node("emergency", emergency_node)
 builder.add_node("out_of_scope", out_of_scope_node)
 builder.add_node("unclear", unclear_node)
 builder.add_node("sources_request", sources_request_node)
+builder.add_node("no_evidence", no_evidence_node)
 builder.set_entry_point("router")
 builder.add_conditional_edges("router", route_decision, {
     "rag": "rag", "llm": "llm", "emergency": "emergency",
     "out_of_scope": "out_of_scope", "unclear": "unclear",
     "sources_request": "sources_request",
+    "no_evidence": "no_evidence",
 })
+builder.add_edge("no_evidence", END)
 for node in ("rag", "llm", "emergency", "out_of_scope", "unclear", "sources_request"):
     builder.set_finish_point(node)
 graph = builder.compile()
