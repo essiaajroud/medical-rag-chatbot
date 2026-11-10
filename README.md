@@ -133,13 +133,6 @@ See the [architecture documentation](backend/docs/langgraph-architecture.md) for
 The backend exposes two endpoints using the same `/ask` path with different HTTP methods.
 
 
-## LangGraph Agent Architecture
-
-The following diagram illustrates the actual MediBot LangGraph nodes and conditional transitions declared in the backend.
-
-See the [architecture documentation](backend/docs/langgraph-architecture.md) for node responsibilities, routing conditions, and implementation details.
-
-![MediBot LangGraph Agent Architecture](backend/docs/screenshots/08-langgraph-architecture.png)
 
 
 ### 4.1 GET `/ask`
