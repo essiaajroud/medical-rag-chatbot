@@ -1,0 +1,32 @@
+flowchart TD
+    __start__([START]) --> router["router<br/>priority checks, intent classification,<br/>retrieval gate"]
+
+    router -->|decision = emergency<br/>emergency pattern matched| emergency["emergency<br/>localized urgent guidance"]
+    router -->|decision = rag<br/>non-empty scores and docs; top score >= SIM_THRESHOLD| rag["rag<br/>RAG answer + validated sources;<br/>internal fallback at RAG_CONTEXT_THRESHOLD"]
+    router -->|decision = llm<br/>declared branch; not set by current router| llm["llm<br/>general_answer()"]
+    router -->|decision = out_of_scope<br/>out-of-scope classification| out_of_scope["out_of_scope<br/>localized scope response"]
+    router -->|decision = unclear<br/>clarification or unclear classification| unclear["unclear<br/>clarification response"]
+    router -->|decision = sources_request<br/>source-request classification| sources_request["sources_request<br/>prior sources unavailable"]
+    router -->|decision = no_evidence<br/>no store, empty results, or top score below threshold| no_evidence["no_evidence<br/>localized insufficient-evidence response"]
+
+    rag --> __end__([END])
+    llm --> __end__
+    emergency --> __end__
+    out_of_scope --> __end__
+    unclear --> __end__
+    sources_request --> __end__
+    no_evidence --> __end__
+
+    classDef routerStyle fill:#1d4ed8,color:#ffffff,stroke:#1e3a8a,stroke-width:3px
+    classDef processingStyle fill:#0f766e,color:#ffffff,stroke:#115e59,stroke-width:2px
+    classDef emergencyStyle fill:#b91c1c,color:#ffffff,stroke:#7f1d1d,stroke-width:2px
+    classDef fallbackStyle fill:#d97706,color:#ffffff,stroke:#92400e,stroke-width:2px
+    classDef terminalStyle fill:#334155,color:#ffffff,stroke:#0f172a,stroke-width:2px
+    classDef declaredOnlyStyle fill:#64748b,color:#ffffff,stroke:#334155,stroke-width:2px
+
+    class router routerStyle
+    class rag processingStyle
+    class emergency emergencyStyle
+    class out_of_scope,unclear,sources_request,no_evidence fallbackStyle
+    class llm declaredOnlyStyle
+    class __start__,__end__ terminalStyle

@@ -61,40 +61,41 @@ MediBot follows a frontend/backend architecture.
 
 ```mermaid
 flowchart TD
-    U[User] --> FE[React + TypeScript Frontend]
-    FE -->|POST /ask| API[FastAPI]
-    API --> VALID[Pydantic Request Validation]
-    VALID --> GREETING[Greeting Detection]
+```mermaid
+U[User] --> FE[React + TypeScript Frontend]
+FE -->|POST /ask| API[FastAPI]
+API --> VALID[Pydantic Request Validation]
+VALID --> GREETING[Greeting Detection]
 
-    GREETING -->|Greeting| RESPONSE[API Response]
-    GREETING -->|Medical or Other Question| AGENT[run_agent]
-    AGENT --> GRAPH[LangGraph Workflow]
+GREETING -->|Greeting| RESPONSE[API Response]
+GREETING -->|Medical or Other Question| AGENT[run_agent]
+AGENT --> GRAPH[LangGraph Workflow]
 
-    GRAPH --> ROUTER[Router Node]
+GRAPH --> ROUTER[Router Node]
 
-    ROUTER -->|Emergency| EMERGENCY[Emergency Node]
-    ROUTER -->|Relevant Documents| RAG[RAG Node]
-    ROUTER -->|No Evidence| NOEVIDENCE[No Evidence Node]
-    ROUTER -->|Out of Scope| OUT[Out of Scope Node]
-    ROUTER -->|Unclear| UNCLEAR[Unclear Node]
-    ROUTER -->|Source Request| SOURCES[Sources Request Node]
+ROUTER -->|Emergency| EMERGENCY[Emergency Node]
+ROUTER -->|Relevant Documents| RAG[RAG Node]
+ROUTER -->|No Evidence| NOEVIDENCE[No Evidence Node]
+ROUTER -->|Out of Scope| OUT[Out of Scope Node]
+ROUTER -->|Unclear| UNCLEAR[Unclear Node]
+ROUTER -->|Source Request| SOURCES[Sources Request Node]
 
-    RAG --> RETRIEVAL[FAISS Retrieval]
-    RETRIEVAL --> FILTER[Similarity Filtering]
-    FILTER --> CONTEXT[Context Construction]
-    CONTEXT --> GENERATION[LLM Generation]
-    GENERATION --> VALIDATION[Response and Document ID Validation]
-    VALIDATION --> FINAL[Answer + Validated Sources]
+RAG --> RETRIEVAL[FAISS Retrieval]
+RETRIEVAL --> FILTER[Similarity Filtering]
+FILTER --> CONTEXT[Context Construction]
+CONTEXT --> GENERATION[LLM Generation]
+GENERATION --> VALIDATION[Response and Document ID Validation]
+VALIDATION --> FINAL[Answer + Validated Sources]
 
-    EMERGENCY --> RESPONSE
-    NOEVIDENCE --> RESPONSE
-    OUT --> RESPONSE
-    UNCLEAR --> RESPONSE
-    SOURCES --> RESPONSE
-    FINAL --> RESPONSE
+EMERGENCY --> RESPONSE
+NOEVIDENCE --> RESPONSE
+OUT --> RESPONSE
+UNCLEAR --> RESPONSE
+SOURCES --> RESPONSE
+FINAL --> RESPONSE
 
-    RESPONSE --> FE
-    FE --> U
+RESPONSE --> FE
+FE --> U
 ```
 
 The graph also contains an `llm` node for general LLM responses. Its actual routing should be completed or verified: the examined `router_node` does not explicitly return an `llm` decision.
@@ -120,9 +121,26 @@ The router prioritizes emergency detection, processes follow-up context, evaluat
 
 **Implementation note:** The `llm` node exists in the graph, but its routing path must be checked against the current router logic before considering it an active route.
 
+## LangGraph Agent Architecture
+
+The following diagram illustrates the actual MediBot LangGraph nodes and conditional transitions declared in the backend.
+
+See the [architecture documentation](backend/docs/langgraph-architecture.md) for node responsibilities, routing conditions, and implementation details.
+
+![MediBot LangGraph Agent Architecture](backend/docs/screenshots/08-langgraph-architecture.png)
 ## 4. Backend API
 
 The backend exposes two endpoints using the same `/ask` path with different HTTP methods.
+
+
+## LangGraph Agent Architecture
+
+The following diagram illustrates the actual MediBot LangGraph nodes and conditional transitions declared in the backend.
+
+See the [architecture documentation](backend/docs/langgraph-architecture.md) for node responsibilities, routing conditions, and implementation details.
+
+![MediBot LangGraph Agent Architecture](backend/docs/screenshots/08-langgraph-architecture.png)
+
 
 ### 4.1 GET `/ask`
 
@@ -730,3 +748,4 @@ It also provides hands-on experience in AI engineering, RAG pipelines, vector da
 ## Repository
 
 GitHub: https://github.com/essiaajroud/medical-rag-chatbot.git
+
